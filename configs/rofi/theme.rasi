@@ -1,0 +1,85 @@
+/* Rofi theme matching your Hyprland config */
+
+* {
+    /* Colors from Hyprland */
+    active:   #33ccff;
+    inactive: #595959;
+
+    /* Backgrounds */
+    bg:      rgba(30,30,30,0.70);
+    bg-alt:  rgba(38,38,38,0.70);
+
+    fg:      #e6e6e6;
+    fg-alt:  #b0b0b0;
+
+    background-color: transparent;
+    text-color: @fg;
+}
+
+/* Main window */
+window {
+    width: 500px;
+    border: 1px;
+    border-radius: 2px;
+    border-color: @active;
+    background-color: @bg;
+}
+
+/* Input bar */
+inputbar {
+    padding: 10px;
+    spacing: 8px;
+    background-color: @bg-alt;
+    border-radius: 2px;
+}
+
+prompt {
+    text-color: @active;
+}
+
+entry {
+    text-color: @fg;
+    placeholder: "Search…";
+    placeholder-color: @fg-alt;
+}
+
+/* List */
+listview {
+    lines: 8;
+    spacing: 6px;
+    padding: 8px;
+    background-color: transparent;
+}
+
+/* Elements */
+element {
+    padding: 8px;
+    border-radius: 2px;
+}
+
+element normal.normal {
+    text-color: @fg;
+}
+
+element selected.normal {
+    background-color: rgba(51,204,255,0.85);
+    text-color: #000000;
+}
+
+element alternate.normal {
+    background-color: transparent;
+}
+
+/* Icons */
+element-icon {
+    size: 22px;
+    margin: 0 8px 0 0;
+}
+
+/* Scrollbar */
+scrollbar {
+    width: 4px;
+    handle-color: @active;
+    background-color: rgba(89,89,89,0.4);
+}
+

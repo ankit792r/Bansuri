@@ -1,0 +1,21 @@
+#!/bin/bash
+
+POWER_MENU="  Lock\n󰗽  Logout\n  Reboot\n  Power Off"
+
+CHOICE=$(echo -e "$POWER_MENU" | rofi -dmenu -p "Power" -lines 4)
+
+case "$CHOICE" in
+    Lock)
+        pkill hyprlock || hyprlock
+        ;;
+    Logout)
+        echo "logging out"
+        ;;
+    Reboot)
+        systemctl reboot
+        ;;
+    "Power Off")
+        systemctl poweroff
+        ;;
+esac
+

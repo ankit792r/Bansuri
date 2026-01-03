@@ -1,0 +1,78 @@
+{
+  "layer":"top",
+  "position": "bottom",
+  "height": 28,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": [],
+  "modules-right": [
+    "pulseaudio",
+    "backlight",
+    "network",
+    "cpu",
+    "memory",
+    "temperature",
+    "battery",
+    "clock",
+    "tray"
+  ],
+
+  "clock": {
+    "timezone": "Asia/Kolkata",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+    "format-alt": "{:%Y-%m-%d}"
+  },
+
+  "cpu": {
+    "format": "CPU {usage}%",
+    "tooltip": false
+  },
+
+  "memory": {
+    "format": "MEM {used:0.1f}G/{total:0.1f}G"
+  },
+
+  "temperature": {
+    "critical-threshold": 80,
+    "format": "TEMP {temperatureC}°C"
+   },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 20
+    },
+    "format": "BAT {capacity}%",
+    "format-full": "BAT {capacity}%",
+    "format-charging": "BAT-C {capacity}%",
+    "format-plugged": "BAT-P {capacity}%",
+    "format-alt": "{time} {icon}"
+  },
+
+  "network": {
+    "format-wifi": "{essid}",
+    "format-ethernet": "{ipaddr}/{cidr}",
+    "tooltip-format": "{ifname} via {gwaddr}",
+    "format-linked": "{ifname} (No IP)",
+    "format-disconnected": "Disconnected",
+    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+  },
+
+  "pulseaudio": {
+    "format": "{volume}%",
+    "format-bluetooth": "{volume}%",
+    "format-muted": "MUTED",
+    "format-source": "{volume}%",
+    "format-source-muted": "MUTED",
+    "on-click": "pavucontrol"
+  },
+
+  "backlight": {
+    "format": "{percent}% {icon}"
+  },
+
+  "tray": {
+      "icon-size": 18,
+      "spacing": 5
+    }
+}
+

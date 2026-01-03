@@ -1,0 +1,11 @@
+configuration {
+    modes: "drun,run,window";
+    font: "mono 14";
+    show-icons: true;
+    icon-theme: "Papirus";
+    drun-display-format: "{icon} {name}";
+    fix-num-line: false;
+}
+
+ @theme "./theme.rasi"
+
