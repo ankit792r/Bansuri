@@ -1,15 +1,11 @@
--- 🔑 Leader key
 vim.g.mapleader = " "
 
--- 🌐 Encoding
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
 
--- 🔢 Line Numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
 
--- 📝 Tabs & Indentation
 vim.opt.tabstop = 2
 vim.opt.shiftwidth = 2
 vim.opt.expandtab = true
@@ -18,17 +14,14 @@ vim.opt.smartindent = true
 vim.opt.smarttab = true
 vim.opt.breakindent = true
 
--- 📜 Wrapping
 vim.opt.wrap = false
 
--- 🔍 Searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.opt.inccommand = "split"
 
--- 💡 UI & Cursor
 vim.opt.cursorline = true
 vim.opt.signcolumn = "yes"
 vim.opt.showmatch = true
@@ -37,18 +30,14 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 3
 vim.opt.scrolloff = 4
 
--- 🔙 Backspace
 vim.opt.backspace = { "start", "eol", "indent" }
 
--- 📋 Clipboard
 vim.opt.clipboard:append("unnamedplus")
 
--- 🪟 Splits
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 vim.opt.splitkeep = "cursor"
 
--- 🖱️ Mouse (disabled for keyboard-only users; change to 'a' if needed)
 vim.opt.mouse = "a"
 
 -- 💾 Swap & Undo
@@ -57,9 +46,6 @@ vim.opt.undofile = true
 vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 
--- 🧙 Persistent Sessions
-vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
-
 vim.wo.number = true
 vim.opt.showmode = false
 vim.opt.cmdheight = 0
@@ -67,16 +53,13 @@ vim.opt.cmdheight = 0
 vim.cmd([[ autocmd RecordingEnter * set cmdheight=1 ]])
 vim.cmd([[ autocmd RecordingLeave * set cmdheight=0 ]])
 
--- ✨ Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
 vim.cmd([[let &t_Ce = "\e[4:0m"]])
 
--- ⚙️ LazyVim globals (optional)
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_cmp = "blink.cmp"
 
--- diagnostic config
 vim.diagnostic.config({
   signs = true,
   unerline = true,
@@ -87,5 +70,3 @@ vim.diagnostic.config({
 })
 
 vim.o.termguicolors = true
--- vim.cmd("hi Normal guibg=NONE")
-

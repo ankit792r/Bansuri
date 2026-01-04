@@ -17,6 +17,6 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>fb", vim.lsp.buf.format, {})
+    vim.keymap.set("n", "<leader>bf", vim.lsp.buf.format, {})
   end,
 }

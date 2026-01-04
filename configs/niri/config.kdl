@@ -58,7 +58,7 @@ spawn-sh-at-startup "uwsm-app -- hypridle"
 screenshot-path "~/Pictures/Screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 
 overview {
-   zoom 0.6
+   zoom 0.5
    workspace-shadow {
 	   off
    }
@@ -66,10 +66,6 @@ overview {
 
 layer-rule {
    match namespace="^wallpaper$"
-   place-within-backdrop true
-}
-
-layer-rule {
    match namespace="^hyprpaper$"
    place-within-backdrop true
 }
@@ -113,9 +109,7 @@ binds {
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "rofi -show drun"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "pkill hyprlock || hyprlock"; }
-    Mod+Backspace hotkey-overlay-title="Show menu menu" { spawn-sh "power-menu"; }
-
-    Mod+Alt+S allow-when-locked=true hotkey-overlay-title=null { spawn-sh "pkill orca || exec orca"; }
+    Mod+Backspace hotkey-overlay-title="Show menu menu" { spawn-sh ""; }
 
     XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
     XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
