@@ -3,7 +3,7 @@ from config import link_configs, link_home_dotfiles, configure_sddm
 
 if __name__ == "__main__":
     print("\n\tInstalling packages\n")
-    install_from_package_dir()
+    #install_from_package_dir()
 
     print("\n\tInstalling configs\n")
     link_configs()

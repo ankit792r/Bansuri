@@ -10,4 +10,6 @@ vim.keymap.set("x", "<leader>p", '"_dp')
 
 vim.keymap.set("n", "<esc>", "<cmd>noh<CR>")
 vim.keymap.set("n", "<leader>sr", ":%s/")
+vim.keymap.set("n", "<leader>bd", ":bdelete<CR>", { desc = "Delete current buffer" })
+
 

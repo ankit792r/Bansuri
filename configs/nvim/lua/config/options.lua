@@ -40,7 +40,6 @@ vim.opt.splitkeep = "cursor"
 
 vim.opt.mouse = "a"
 
--- 💾 Swap & Undo
 vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.backup = false
@@ -59,14 +58,5 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_picker = "telescope"
 vim.g.lazyvim_cmp = "blink.cmp"
-
-vim.diagnostic.config({
-  signs = true,
-  unerline = true,
-  upate_in_insert = true,
-  virtual_text = {
-    prefix = "■",
-  },
-})
 
 vim.o.termguicolors = true
