@@ -17,6 +17,11 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+cursor {
+  xcursor-theme "Vimix-cursors"
+  xcursor-size 28
+}
+
 // laptop monitor
 output "eDP-1" {
     mode "1920x1080@60.002"
