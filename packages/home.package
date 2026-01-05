@@ -1,4 +1,3 @@
-gnome
 hyprland
 niri
 waybar
@@ -6,6 +5,7 @@ rofi-wayland
 fontconfig
 mako
 waybar
+kitty
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdg-desktop-portal-gtk
@@ -23,6 +23,7 @@ brightnessctl
 wl-clipboard
 wf-recorder
 satty
+uwsm
 
 
 ttf-jetbrains-mono-nerd

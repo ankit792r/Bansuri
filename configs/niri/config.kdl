@@ -13,8 +13,17 @@ input {
     focus-follows-mouse max-scroll-amount="0%"
 }
 
+// laptop monitor
 output "eDP-1" {
     mode "1920x1080@60.002"
+    scale 1
+    transform "normal"
+    position x=0 y=0
+}
+
+// office monitor
+output "HDMI-A-1" {
+    mode "1920x1080@74.973"
     scale 1
     transform "normal"
     position x=0 y=0
@@ -54,6 +63,7 @@ spawn-sh-at-startup "uwsm-app -- waybar"
 spawn-sh-at-startup "uwsm-app -- mako"
 spawn-sh-at-startup "uwsm-app -- hyprpaper"
 spawn-sh-at-startup "uwsm-app -- hypridle"
+spawn-sh-at-startup "uwsm-app -- hyprsunset"
 
 screenshot-path "~/Pictures/Screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 
