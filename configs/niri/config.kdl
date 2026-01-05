@@ -1,5 +1,9 @@
 prefer-no-csd
 
+environment {
+  QT_QPA_PLATFORMTHEME "qt5ct"
+}
+
 input {
     keyboard {
         xkb {}

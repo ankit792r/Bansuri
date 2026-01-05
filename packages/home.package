@@ -2,7 +2,6 @@ hyprland
 niri
 waybar
 rofi-wayland
-fontconfig
 mako
 waybar
 kitty
@@ -25,7 +24,23 @@ wf-recorder
 satty
 uwsm
 
+fontconfig
+vimix-cursors
+gtk3
+gtk4
+qt5ct
+qt6ct
 
-ttf-jetbrains-mono-nerd
 inter-font
+adobe-source-sans-fonts
+adobe-source-serif-fonts
+ttf-jetbrains-mono-nerd
+noto-fonts
+noto-fonts-cjk
 noto-fonts-emoji
+noto-fonts-extra
+ttf-font-awesome
+ttf-liberation
+ttf-dejavu
+ttf-dejavu-nerd
+
