@@ -23,8 +23,10 @@ return {
         use_libuv_file_watcher = true,
       },
     })
-    vim.keymap.set("n", "<leader>e", ":Neotree filesystem toggle left reveal<CR>", {})
-    vim.keymap.set("n", "<leader>s", ":Neotree git_status toggle float<CR>", {})
-    vim.keymap.set("n", "<leader>bb", ":Neotree buffers reveal float<CR>")
+    vim.cmd([[
+      hi NeoTreeNormal guibg=NONE
+      hi NeoTreeNormalNC guibg=NONE
+      hi NeoTreeEndOfBuffer guibg=NONE
+    ]])
   end,
 }
