@@ -5,16 +5,16 @@ POWER_MENU="  Lock\n󰗽  Logout\n  Reboot\n  Power Off"
 CHOICE=$(echo -e "$POWER_MENU" | rofi -dmenu -p "Power" -lines 4)
 
 case "$CHOICE" in
-    Lock)
+    *Lock)
         pkill hyprlock || hyprlock
         ;;
-    Logout)
-        echo "logging out"
-        ;;
-    Reboot)
+    *Logout)
+        loginctl terminate-session $(loginctl show-session $XDG_SESSION_ID -p Id --value)        
+    ;;
+    *Reboot)
         systemctl reboot
         ;;
-    "Power Off")
+    *Power\ Off)
         systemctl poweroff
         ;;
 esac
