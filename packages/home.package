@@ -23,6 +23,11 @@ wl-clipboard
 wf-recorder
 satty
 uwsm
+pipewire
+pipewire-pulse
+pipewire-jack
+pipewire-libcamera
+wireplumber
 
 fontconfig
 vimix-cursors

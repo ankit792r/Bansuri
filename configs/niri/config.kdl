@@ -101,6 +101,7 @@ window-rule {
 
 window-rule {
    match app-id=r#"firefox$"#
+   match app-id=r#"teams-for-linux"#
    opacity 1.0
    default-column-width { proportion 0.75; }
 }
