@@ -30,7 +30,6 @@ pipewire-libcamera
 wireplumber
 
 fontconfig
-vimix-cursors
 gtk3
 gtk4
 qt5ct
