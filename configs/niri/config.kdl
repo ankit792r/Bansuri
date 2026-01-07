@@ -18,7 +18,7 @@ input {
 }
 
 cursor {
-  xcursor-theme "Vimix-cursors"
+  xcursor-theme "Qogir-cursors"
   xcursor-size 28
 }
 
