@@ -5,6 +5,7 @@ return {
   { "nvim-mini/mini.icons", enabled = false },
   { "trouble.nvim ", enabled = false },
   { "persistence.nvim", enabled = false },
+  { "catppuccin/nvim", enabled = false },
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
