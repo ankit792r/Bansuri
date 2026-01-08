@@ -40,8 +40,8 @@ output "HDMI-A-1" {
 
 layout {
     gaps 8
-    center-focused-column "never"
     always-center-single-column
+    center-focused-column "never"
 
     preset-column-widths {
         proportion 0.33333
@@ -86,12 +86,8 @@ overview {
 layer-rule {
    match namespace="^wallpaper$"
    match namespace="^hyprpaper$"
+   match namespace="waybar"
    place-within-backdrop true
-}
-
-layer-rule {
-  match namespace="waybar"
-  place-within-backdrop true
 }
 
 window-rule {
