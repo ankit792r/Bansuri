@@ -17,7 +17,7 @@ return {
         },
         theme = {
           normal = {
-            a = { fg = "#000000", bg = "#89b4fa", gui = "bold" }, -- mode section color
+            a = { fg = "NONE", bg = "NONE" },
             b = { fg = "NONE", bg = "NONE" },
             c = { fg = "NONE", bg = "NONE" },
           },

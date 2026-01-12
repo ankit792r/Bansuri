@@ -54,8 +54,8 @@ layout {
 
     border {
 	    width 2
-      active-color "#33ccffed"
-      inactive-color "#595959ab"
+      active-color "#7aa2f7"
+      inactive-color "#292e42"
     }
 
     background-color "transparent"
