@@ -92,7 +92,7 @@ layer-rule {
 
 window-rule {
    draw-border-with-background false
-   opacity 0.85
+   opacity 0.8
 }
 
 window-rule {
