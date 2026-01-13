@@ -17,32 +17,26 @@ return {
     end,
   },
   {
+    "lewis6991/gitsigns.nvim",
+    config = function()
+      require("gitsigns").setup({
+        numhl = true,
+        current_line_blame = true,
+      })
+    end,
+  },
+  {
     "folke/snacks.nvim",
     opts = {
-      bigfile = { enabled = false },
-      dashboard = { enabled = false },
+      bigfile = { enabled = true },
+      indent = { enabled = true },
+      scroll = { enabled = true },
+      image = { enabled = true },
       explorer = { enabled = false },
-      image = {
-        enabled = true
-      },
-      indent = {
-        enabled = true,
-        only_scope = false,
-        animate = {
-          enabled = vim.fn.has("nvim-0.10") == 1,
-          style = "out",
-          easing = "linear",
-          duration = {
-            step = 20, -- ms per step
-            total = 500, -- maximum duration
-          },
-        },
-      },
       input = { enabled = false },
       notifier = { enabled = false },
       quickfile = { enabled = false },
       scope = { enabled = false },
-      scroll = { enabled = true },
       statuscolumn = { enabled = false },
       words = { enabled = false },
     },

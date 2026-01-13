@@ -6,6 +6,7 @@ return {
   { "trouble.nvim ", enabled = false },
   { "persistence.nvim", enabled = false },
   { "catppuccin/nvim", enabled = false },
+  { "lazygit", enabled = false },
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)

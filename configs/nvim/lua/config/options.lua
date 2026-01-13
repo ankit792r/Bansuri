@@ -7,3 +7,4 @@ vim.opt.undofile = false
 vim.opt.cmdheight = 0
 
 vim.g.trouble_lualine = false
+vim.g.lazygit_config = false
