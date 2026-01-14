@@ -35,4 +35,13 @@ return {
       -- options
     },
   },
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    opts = {
+      win = {
+        border = "single", -- Options: "single", "double", "solid", "rounded", "none"
+      },
+    },
+  },
 }
