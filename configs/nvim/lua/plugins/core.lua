@@ -39,20 +39,7 @@ return {
       scope = { enabled = false },
       statuscolumn = { enabled = false },
       words = { enabled = false },
-      picker = {
-        enabled = true,
-        picker = {
-          win = {
-            border = "single",
-          },
-          preview = {
-            border = "single",
-          },
-          input = {
-            border = "single",
-          },
-        },
-      },
+      picker = { enabled = true },
     },
   },
 }

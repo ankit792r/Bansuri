@@ -14,7 +14,7 @@ return {
       },
 
       menu = {
-        border = vim.o.winborder,
+        border = "single",
         draw = {
           treesitter = { "lsp" },
         },
