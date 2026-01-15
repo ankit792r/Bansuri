@@ -4,12 +4,11 @@ rofi-wayland
 mako
 waybar
 kitty
-xdg-desktop-portal-hyprland
-xdg-desktop-portal-wlr
+xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
 xwayland-satellite
-hyprpolkitagent
 polkit-kde-agent
+gnome-keyring
 hyprlock
 hypridle
 hyprsunset
