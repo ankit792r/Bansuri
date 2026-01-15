@@ -73,6 +73,7 @@ spawn-sh-at-startup "uwsm-app -- mako"
 spawn-sh-at-startup "uwsm-app -- hypridle"
 spawn-sh-at-startup "uwsm-app -- hyprsunset"
 spawn-sh-at-startup "uwsm-app -- swaybg -i ~/Bansuri/defaults/background.jpg -m fill"
+spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1"
 
 screenshot-path "~/Pictures/Screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 
@@ -123,6 +124,7 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
 
+    Mod+B hotkey-overlay-title="Open Browser" { spawn "firefox"; }
     Mod+Return hotkey-overlay-title="Open a Terminal" { spawn "kitty"; }
     Mod+Space hotkey-overlay-title="Run an Application" { spawn-sh "uwsm-app app-menu"; }
     Mod+Alt+L hotkey-overlay-title="Lock the Screen" { spawn-sh "pkill hyprlock || hyprlock"; }

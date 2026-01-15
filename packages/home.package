@@ -9,6 +9,7 @@ xdg-desktop-portal-wlr
 xdg-desktop-portal-gnome
 xwayland-satellite
 hyprpolkitagent
+polkit-kde-agent
 hyprlock
 hypridle
 hyprsunset
