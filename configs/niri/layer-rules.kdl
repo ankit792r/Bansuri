@@ -1,0 +1,6 @@
+layer-rule {
+   match namespace="^wallpaper$"
+   match namespace="^hyprpaper$"
+   match namespace="waybar"
+   place-within-backdrop true
+}
