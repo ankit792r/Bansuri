@@ -7,3 +7,4 @@ PS1='[\W]-> '
 
 export PATH="$HOME/Bansuri/scripts:$PATH"
 
+. "$HOME/.cargo/env"
