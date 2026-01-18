@@ -25,6 +25,7 @@ layout {
     gaps 8
     always-center-single-column
     center-focused-column "never"
+    background-color "transparent"
 
     preset-column-widths {
         proportion 0.33333
@@ -40,8 +41,6 @@ layout {
       active-color "#7aa2f7"
       inactive-color "#292e42"
     }
-
-    background-color "transparent"
 
     struts {
         left 2

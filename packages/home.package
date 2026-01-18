@@ -27,7 +27,6 @@ pipewire-pulse
 pipewire-jack
 pipewire-libcamera
 wireplumber
-pcmanfm
 
 neovim
 tmux
