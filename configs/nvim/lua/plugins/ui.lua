@@ -31,8 +31,14 @@ return {
   },
   {
     "j-hui/fidget.nvim",
+    event = "VeryLazy",
     opts = {
-      -- options
+      progress = {
+        suppress_on_insert = true,
+      },
+      notification = {
+        override_vim_notify = true,
+      },
     },
   },
   {
