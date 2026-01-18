@@ -7,7 +7,7 @@ kitty
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
 xwayland-satellite
-polkit-kde-agent
+polkit-gnome
 gnome-keyring
 hyprlock
 hypridle
@@ -28,6 +28,9 @@ pipewire-jack
 pipewire-libcamera
 wireplumber
 pcmanfm
+
+neovim
+tmux
 
 fontconfig
 gtk3
