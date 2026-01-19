@@ -36,7 +36,13 @@ return {
       sections = {
         lualine_a = { "mode" },
         lualine_b = { "branch", "diff", "diagnostics" },
-        lualine_c = {},
+        lualine_c = {
+          {
+            "filename",
+            path = 1, -- show relative path
+            padding = { left = 1, right = 1 },
+          },
+        },
         lualine_x = {},
         lualine_y = { "filetype" },
         lualine_z = { "progress", "location" },
@@ -48,25 +54,6 @@ return {
         lualine_x = {},
         lualine_y = {},
         lualine_z = {},
-      },
-      tabline = {},
-      winbar = {},
-      inactive_winbar = {},
-      extensions = {},
-    })
-
-    -- Create a centered filename in the middle of the statusline
-    -- Use Lualine's `lualine_c` in the middle section
-    require("lualine").setup({
-      sections = {
-        lualine_c = {
-          {
-            "filename",
-            path = 1, -- show relative path
-            color = { fg = "NONE", bg = "NONE" },
-            padding = { left = 1, right = 1 },
-          },
-        },
       },
     })
   end,
