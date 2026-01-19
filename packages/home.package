@@ -28,9 +28,6 @@ pipewire-jack
 pipewire-libcamera
 wireplumber
 
-neovim
-tmux
-
 fontconfig
 gtk3
 gtk4
