@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+# Kill any existing cbonsai screensaver kitty instance
+pkill -f "kitty.*cbonsai" 2>/dev/null
+
+# Launch kitty fullscreen with opacity and cbonsai
+exec kitty \
+  --app-id bansuri.screensaver \
+  --override background_opacity=0.8 \
+  sh -c 'cbonsai -li'
+
