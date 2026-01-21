@@ -1,24 +1,26 @@
 #!/bin/bash
 
-POWER_MENU="  Lock\n󰗽  Logout\n  Reboot\n  Suspend\n  Power Off"
+POWER_MENU="  Lock\n  Screensaver\n󰗽  Logout\n  Reboot\n  Suspend\n  Power Off"
 
 CHOICE=$(echo -e "$POWER_MENU" | rofi -dmenu -p "Power" -lines 4)
 
 case "$CHOICE" in
-    *Lock)
-        pkill hyprlock || uwsm-app hyprlock
-        ;;
-    *Logout)
-        loginctl kill-session $(loginctl show-session $XDG_SESSION_ID -p Id --value)
-        ;;
-    *Suspend)
-        systemctl suspend
-        ;;
-    *Reboot)
-        systemctl reboot
-        ;;
-    *Power\ Off)
-        systemctl poweroff
-        ;;
+*Lock)
+	pkill hyprlock || uwsm-app hyprlock
+	;;
+*Screensaver)
+	launch-screensaver
+	;;
+*Logout)
+	loginctl kill-session $(loginctl show-session $XDG_SESSION_ID -p Id --value)
+	;;
+*Suspend)
+	systemctl suspend
+	;;
+*Reboot)
+	systemctl reboot
+	;;
+*Power\ Off)
+	systemctl poweroff
+	;;
 esac
-

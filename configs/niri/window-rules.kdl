@@ -32,7 +32,9 @@ window-rule {
 }
 
 window-rule {
-  match app-id=r#"bansuri\.screensaver"#
-  open-fullscreen true
-  opacity 0.8
+    match app-id="bansuri.screensaver"
+    open-fullscreen true
+    // block-from-task-switcher true
+    opacity 0.8
 }
+
