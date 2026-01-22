@@ -1,0 +1,46 @@
+# Font (match Waybar)
+font=JetBrainsMono Nerd Font 11
+
+# General layout
+width=360
+height=120
+margin=10
+padding=6
+border-size=2
+border-radius=0
+layer=overlay
+anchor=top-right
+
+background-color=#282a36cc
+text-color=#f8f8f2
+border-color=#282a36
+
+# Icons
+icons=1
+icon-path=/usr/share/icons
+max-icon-size=48
+
+# Behavior
+default-timeout=5000
+ignore-timeout=0
+group-by=app-name
+
+# Progress bar
+progress-color=#FFFFFF
+
+# --- Urgency styling ---
+[urgency=low]
+background-color=#282a36cc
+text-color=#f8f8f2
+border-color=#6272a4
+
+[urgency=normal]
+background-color=#282a36cc
+text-color=#f8f8f2
+border-color=#7aa2f7
+
+[urgency=high]
+background-color=#ff5555cc
+text-color=#f8f8f2
+border-color=#ff5555
+

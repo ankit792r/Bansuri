@@ -10,3 +10,9 @@ input {
 
     focus-follows-mouse max-scroll-amount="0%"
 }
+
+cursor {
+  xcursor-theme "Qogir-cursors"
+  xcursor-size 28
+  hide-when-typing
+}
