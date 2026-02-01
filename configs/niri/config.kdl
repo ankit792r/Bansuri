@@ -30,9 +30,9 @@ layout {
     focus-ring { off; }
 
     border {
-	    width 2
-      active-color "#7aa2f7"
-      inactive-color "#292e42"
+     width 2
+      active-color "#1d2c4d"
+      inactive-color "#101b31"
     }
 
     struts {
