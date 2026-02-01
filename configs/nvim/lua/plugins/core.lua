@@ -24,22 +24,5 @@ return {
         current_line_blame = true,
       })
     end,
-  },
-  {
-    "folke/snacks.nvim",
-    opts = {
-      bigfile = { enabled = true },
-      indent = { enabled = true },
-      scroll = { enabled = true },
-      image = { enabled = true },
-      explorer = { enabled = false },
-      input = { enabled = false },
-      notifier = { enabled = false },
-      quickfile = { enabled = false },
-      scope = { enabled = false },
-      statuscolumn = { enabled = false },
-      words = { enabled = false },
-      picker = { enabled = true },
-    },
-  },
+  }
 }

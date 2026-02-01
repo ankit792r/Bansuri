@@ -12,7 +12,7 @@ return {
           "snacks_dashboard",
           "NeogitConsole",
           "NeogitStatus",
-          "NvimTree",
+          -- "NvimTree",
           statusline = {},
           winbar = {},
         },
