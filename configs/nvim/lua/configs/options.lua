@@ -81,19 +81,10 @@ vim.filetype.add({
 	},
 })
 
-
 -- ⚙️ LazyVim globals (optional)
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_cmp = "blink.cmp"
 vim.g.lazyvim_picker = "snacks"
 
--- diagnostic config
-vim.diagnostic.config({
-  signs = true,
-  unerline = true,
-  upate_in_insert = true,
-  virtual_text = {
-    prefix = "■",
-  },
-})
-
+vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
+vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
