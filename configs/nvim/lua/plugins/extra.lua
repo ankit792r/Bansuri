@@ -49,5 +49,11 @@ return {
 			require("todo-comments").setup()
 		end,
 	},
-	{ "nvim-mini/mini.move", version = "*" },
+	{
+		"nvim-mini/mini.move",
+		version = "*",
+		config = function()
+			require("mini.move").setup()
+		end,
+	},
 }

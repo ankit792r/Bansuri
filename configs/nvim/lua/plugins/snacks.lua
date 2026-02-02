@@ -5,6 +5,7 @@ return {
 			enabled = true,
 			ui_select = true,
 		},
+    indent = { enabled = true },
 	},
 	sort_lastused = false,
 	win = {
