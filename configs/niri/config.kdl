@@ -15,7 +15,7 @@ overview {
 }
 
 layout {
-    gaps 8
+    gaps 4
     always-center-single-column
     center-focused-column "never"
     background-color "transparent"
