@@ -5,6 +5,9 @@ alias ls='ls --color=auto'
 alias grep='grep --color=auto'
 PS1='[\W]-> '
 
-export PATH="$HOME/Bansuri/scripts:$PATH"
+bind '"\ej": history-search-forward'
+bind '"\ek": history-search-backward'
 
+export PATH="$HOME/Bansuri/scripts:$PATH"
+export PATH="$HOME/AUR/cursor-cli/dist-package:$PATH"
 . "$HOME/.cargo/env"
