@@ -49,7 +49,7 @@ vim.opt.splitbelow = true
 vim.opt.splitkeep = "cursor"
 
 -- 🖱️ Mouse (disabled for keyboard-only users; change to 'a' if needed)
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 
 -- 💾 Swap & Undo
 vim.opt.swapfile = false
@@ -88,3 +88,7 @@ vim.g.lazyvim_picker = "snacks"
 
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
+
+vim.diagnostic.config({
+  float = { border = "single" },
+})
