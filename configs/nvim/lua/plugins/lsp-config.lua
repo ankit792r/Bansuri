@@ -18,10 +18,16 @@ return {
 		lazy = false,
 		config = function()
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {})
-			vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
-			vim.keymap.set("n", "<leader>rr", vim.lsp.buf.rename, {})
+			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
+			vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, {})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {})
+			vim.keymap.set("n", "<leader>cr", vim.lsp.buf.rename, {})
+			vim.keymap.set("n", "<leader>cR", function()
+				vim.lsp.buf.rename(nil, { rename_file = true })
+			end, {})
+
+			vim.keymap.set("n", "gai", vim.lsp.buf.incoming_calls, {})
+			vim.keymap.set("n", "gao", vim.lsp.buf.outgoing_calls, {})
 		end,
 	},
 }
