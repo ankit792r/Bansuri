@@ -81,6 +81,8 @@ vim.filetype.add({
 	},
 })
 
+vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+
 -- ⚙️ LazyVim globals (optional)
 vim.g.lazyvim_prettier_needs_config = true
 vim.g.lazyvim_cmp = "blink.cmp"
