@@ -39,6 +39,7 @@ vim.opt.scrolloff = 4
 
 -- 🔙 Backspace
 vim.opt.backspace = { "start", "eol", "indent" }
+vim.opt.fillchars = { eob = " " }
 
 -- 📋 Clipboard
 vim.opt.clipboard:append("unnamedplus")
