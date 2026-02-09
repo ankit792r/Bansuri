@@ -27,6 +27,7 @@ pipewire-pulse
 pipewire-jack
 pipewire-libcamera
 wireplumber
+udiskie
 
 fontconfig
 gtk3
