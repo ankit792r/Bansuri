@@ -1,11 +1,14 @@
 return {
 	"folke/snacks.nvim",
+	config = function()
+		require("snacks").setup()
+	end,
 	opts = {
 		picker = {
 			enabled = true,
 			ui_select = true,
 		},
-    indent = { enabled = true },
+		indent = { enabled = true },
 	},
 	sort_lastused = false,
 	win = {
