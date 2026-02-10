@@ -3,7 +3,7 @@ input {
         xkb {}
 
         repeat-delay 200
-        repeat-rate 40
+        repeat-rate 25
     }
 
     touchpad {
@@ -13,7 +13,6 @@ input {
     }
 
     mouse {
-
       accel-profile "flat"
       scroll-factor 2.0
   }
