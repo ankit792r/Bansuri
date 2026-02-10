@@ -43,7 +43,7 @@ vim.opt.wrap = false
 
 -- 🔙 Backspace
 vim.opt.backspace = { "start", "eol", "indent" }
-vim.opt.fillchars = { eob = " " }
+vim.opt.fillchars = { eob = " ", vert = " ", fold = " " }
 
 -- 📋 Clipboard
 vim.opt.clipboard:append("unnamedplus")
