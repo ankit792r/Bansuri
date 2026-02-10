@@ -6,7 +6,9 @@ return {
 		},
 		lazy = false,
 		config = function()
-			require("mason").setup()
+			require("mason").setup({
+				ui = { border = "single" },
+			})
 			require("mason-lspconfig").setup({
 				auto_install = true,
 				ensure_installed = { "lua_ls" },
