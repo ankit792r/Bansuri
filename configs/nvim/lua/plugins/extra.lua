@@ -50,10 +50,9 @@ return {
 		end,
 	},
 	{
-		"nvim-mini/mini.hipatterns",
-		version = "*",
+		"brenoprata10/nvim-highlight-colors",
 		config = function()
-			require("mini.hipatterns").setup()
+			require("nvim-highlight-colors").setup()
 		end,
 	},
 }
