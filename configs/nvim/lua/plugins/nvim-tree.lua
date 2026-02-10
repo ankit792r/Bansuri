@@ -16,6 +16,13 @@ return {
 				update_cwd = true,
 				update_root = true,
 			},
+			view = {
+				width = 30,
+				side = "left",
+			},
+			renderer = {
+				group_empty = true,
+			},
 			git = {
 				enable = true,
 				ignore = false,
@@ -40,16 +47,15 @@ return {
 			api.node.open.horizontal()
 		end, opts)
 
-		vim.keymap.set("n", "<leader>n", function()
+		vim.keymap.set("n", "<A-Right>", function()
 			api.tree.resize({
-				relative = 10,
+				relative = 5,
 			})
 		end)
 
-
-		vim.keymap.set("n", "<leader>n", function()
+		vim.keymap.set("n", "<A-Left>", function()
 			api.tree.resize({
-				relative = 10,
+				relative = -5,
 			})
 		end)
 	end,

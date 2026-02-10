@@ -27,6 +27,7 @@ vim.opt.smartcase = true
 vim.opt.incsearch = true
 vim.opt.hlsearch = true
 vim.opt.inccommand = "split"
+vim.opt.gdefault = true
 
 -- 💡 UI & Cursor
 vim.opt.cursorline = true
@@ -37,6 +38,8 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 3
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 8
+vim.opt.signcolumn = 'yes'
+vim.opt.wrap = false
 
 -- 🔙 Backspace
 vim.opt.backspace = { "start", "eol", "indent" }
@@ -58,6 +61,14 @@ vim.opt.swapfile = false
 vim.opt.undofile = true
 vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
+
+vim.lsp.inlay_hint.enable(true)
+
+vim.opt.splitright = true
+vim.opt.splitbelow = true
+
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
 
 -- 🧙 Persistent Sessions
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
