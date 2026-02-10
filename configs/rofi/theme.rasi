@@ -1,16 +1,15 @@
-/* Rofi theme matching your Hyprland config */
-
 * {
-    /* Colors from Hyprland */
-    active:   #33ccff;
-    inactive: #595959;
+    /* Accents */
+    active:   #797593;   /* niri active border */
+    inactive: #1f1d2e;   /* niri inactive / surface */
 
     /* Backgrounds */
-    bg:      rgba(30,30,30,0.70);
-    bg-alt:  rgba(38,38,38,0.70);
+    bg:       rgba(25,23,36,0.80);  /* base */
+    bg-alt:   rgba(31,29,46,0.85);  /* surface */
 
-    fg:      #e6e6e6;
-    fg-alt:  #b0b0b0;
+    /* Text */
+    fg:       #e0def4;   /* text */
+    fg-alt:   #6e6a86;   /* muted */
 
     background-color: transparent;
     text-color: @fg;
@@ -18,8 +17,8 @@
 
 /* Main window */
 window {
-    width: 500px;
-    border: 1px;
+    width: 400px;
+    border: 2px;
     border-radius: 2px;
     border-color: @active;
     background-color: @bg;
@@ -30,11 +29,11 @@ inputbar {
     padding: 10px;
     spacing: 8px;
     background-color: @bg-alt;
-    border-radius: 2px;
+    border-radius: 4px;
 }
 
 prompt {
-    text-color: @active;
+    text-color: #c4a7e7; /* iris accent */
 }
 
 entry {
@@ -62,8 +61,8 @@ element normal.normal {
 }
 
 element selected.normal {
-    background-color: rgba(51,204,255,0.85);
-    text-color: #000000;
+    background-color: rgba(196,167,231,0.85); /* iris */
+    text-color: #191724; /* base for contrast */
 }
 
 element alternate.normal {
@@ -79,7 +78,7 @@ element-icon {
 /* Scrollbar */
 scrollbar {
     width: 4px;
-    handle-color: @active;
-    background-color: rgba(89,89,89,0.4);
+    handle-color: #c4a7e7; /* iris */
+    background-color: rgba(110,106,134,0.4); /* muted */
 }
 
