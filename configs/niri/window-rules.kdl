@@ -1,6 +1,37 @@
 window-rule {
    draw-border-with-background false
-   opacity 0.8
+   opacity 0.7
+}
+
+// Assorted window rules.
+window-rule {
+    match app-id=r#"^Pinentry-gtk$"#
+    match app-id=r#"^Tk$"#
+    match app-id=r#"^gimp$"# title=r#"Preferences"#
+    match app-id=r#"^mpv$"#
+    match app-id=r#"^soffice$"# title=r#"^Text Import"#
+    match app-id=r#"^thunar$"# title=r#"^Rename "#
+    match app-id=r#"^wev$"#
+    match app-id=r#"^xarchiver$"#
+    match app-id=r#"firefox$"# title=r#"^(Picture-in-Picture|Library|About Mozilla Firefox)$"#
+
+    open-floating true
+}
+
+window-rule {
+    match app-id=r#"^dot\.floating\.ghostty$"#
+    match app-id=r#"^dot\.floating\.thunar$"#
+
+    open-floating true
+    default-column-width { proportion 0.33; }
+    default-window-height { proportion 0.5; }
+}
+
+window-rule {
+    match app-id=r#"^com\.gabm\.satty$"#
+    open-floating true
+    min-width 730
+    min-height 300
 }
 
 window-rule {
@@ -17,11 +48,6 @@ window-rule {
 }
 
 window-rule {
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-    open-floating true
-}
-
-window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
@@ -30,11 +56,3 @@ window-rule {
     // Use this instead if you want them visible on third-party screenshot tools.
     // block-out-from "screencast"
 }
-
-window-rule {
-    match app-id="bansuri.screensaver"
-    open-fullscreen true
-    // block-from-task-switcher true
-    opacity 0.8
-}
-
