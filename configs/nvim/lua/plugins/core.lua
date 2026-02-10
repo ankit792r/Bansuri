@@ -21,6 +21,7 @@ return {
 		name = "rose-pine",
 		config = function()
 			require("rose-pine").setup({
+				varient = "main",
 				styles = {
 					bold = true,
 					italic = true,
