@@ -39,6 +39,9 @@ def link_home_dotfiles(source_dir="defaults"):
         print(f"Linking {item} → {target}")
         target.symlink_to(item)
 
+def link_niri_desktop(source_dir="defaults"):
+    pass
+
 
 def copy_sddm_theme(source_dir="defaults"):
     source_dir = Path(f"{source_dir}/sddm").resolve()
