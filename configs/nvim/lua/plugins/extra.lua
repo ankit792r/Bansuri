@@ -49,4 +49,11 @@ return {
 			require("mini.move").setup()
 		end,
 	},
+	{
+		"nvim-mini/mini.hipatterns",
+		version = "*",
+		config = function()
+			require("mini.hipatterns").setup()
+		end,
+	},
 }
