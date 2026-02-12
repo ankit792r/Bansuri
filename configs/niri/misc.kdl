@@ -1,5 +1,5 @@
 prefer-no-csd
-screenshot-path null
+screenshot-path "~/Pictures/Screenshots/screenshot from %Y-%m-%d %H-%M-%S.png"
 
 hotkey-overlay {
     // Avoid auto-showing the important hotkeys menu.
