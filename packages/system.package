@@ -1,6 +1,5 @@
 vim
 fzf
-ranger
 wget
 curl
 zip
@@ -12,3 +11,14 @@ htop
 iputils
 usbutils
 pciutils
+
+# yazi and related packages
+yazi
+ffmpeg
+jq
+poppler
+fd
+rg
+fzf
+resvg
+xclip
