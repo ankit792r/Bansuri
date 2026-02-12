@@ -1,5 +1,4 @@
-# Font (match Waybar)
-font=JetBrainsMono Nerd Font 11
+font=JetBrainsMono Nerd Font 10
 
 # General layout
 width=360
@@ -11,9 +10,9 @@ border-radius=0
 layer=overlay
 anchor=top-right
 
-background-color=#282a36cc
-text-color=#f8f8f2
-border-color=#282a36
+background-color=#1a1b26cc
+text-color=#c0caf5
+border-color=#403d52
 
 # Icons
 icons=1
@@ -26,21 +25,21 @@ ignore-timeout=0
 group-by=app-name
 
 # Progress bar
-progress-color=#FFFFFF
+progress-color=#283457
 
 # --- Urgency styling ---
 [urgency=low]
-background-color=#282a36cc
-text-color=#f8f8f2
-border-color=#6272a4
+background-color=#1a1b26cc
+text-color=#6e6a86
+border-color=#403d52
 
 [urgency=normal]
-background-color=#282a36cc
-text-color=#f8f8f2
-border-color=#7aa2f7
+background-color=#1a1b26cc
+text-color=#c0caf5
+border-color=#797593
 
 [urgency=high]
-background-color=#ff5555cc
-text-color=#f8f8f2
-border-color=#ff5555
+background-color=#1a1b26cc
+text-color=#eb6f92
+border-color=#eb6f92
 
