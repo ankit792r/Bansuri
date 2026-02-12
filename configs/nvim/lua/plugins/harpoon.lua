@@ -14,16 +14,12 @@ return {
 			},
 		})
 
-		vim.keymap.set("n", "<A-a>", function()
+		vim.keymap.set("n", "<A-i>", function()
 			harpoon:list():add()
 		end)
-		vim.keymap.set("n", "<A-s>", function()
-			harpoon.ui:toggle_quick_menu(harpoon:list())
-		end)
-
-		vim.keymap.set("n", "<A-d>", function()
-			harpoon.list.delete(harpoon:list()) -- TODO: fixme
-		end)
+		vim.keymap.set("n", "<A-o>", function()
+      harpoon.ui:toggle_quick_menu(harpoon:list())
+    end)
 
 		vim.keymap.set("n", "<A-q>", function()
 			harpoon:list():select(1)
@@ -34,17 +30,14 @@ return {
 		vim.keymap.set("n", "<A-e>", function()
 			harpoon:list():select(3)
 		end)
-		vim.keymap.set("n", "<A-r>", function()
+		vim.keymap.set("n", "<A-a>", function()
 			harpoon:list():select(4)
 		end)
-		vim.keymap.set("n", "<A-t>", function()
+		vim.keymap.set("n", "<A-s>", function()
 			harpoon:list():select(5)
 		end)
-		vim.keymap.set("n", "<A-y>", function()
+		vim.keymap.set("n", "<A-d>", function()
 			harpoon:list():select(6)
-		end)
-		vim.keymap.set("n", "<A-u>", function()
-			harpoon:list():select(7)
 		end)
 	end,
 }
