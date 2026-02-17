@@ -50,6 +50,20 @@ return {
 		end,
 	},
 	{
+		"nvim-mini/mini.starter",
+		version = "*",
+		config = function()
+			require("mini.starter").setup()
+		end,
+	},
+	{
+		"nvim-mini/mini.surround",
+		version = "*",
+		config = function()
+			require("mini.surround").setup()
+		end,
+	},
+	{
 		"brenoprata10/nvim-highlight-colors",
 		config = function()
 			require("nvim-highlight-colors").setup()
