@@ -34,7 +34,11 @@ return {
 				},
 			},
 		},
-		indent = { enabled = true },
+		indent = {
+			enabled = true,
+			only_scope = true,
+			animate = { enabled = false },
+		},
 	},
 	sort_lastused = false,
 	win = {
