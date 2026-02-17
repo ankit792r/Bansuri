@@ -1,6 +1,6 @@
 spawn-sh-at-startup "uwsm-app -- waybar"
 spawn-sh-at-startup "uwsm-app -- mako"
 spawn-sh-at-startup "uwsm-app -- hypridle"
-spawn-sh-at-startup "uwsm-app -- hyprsunset"
+spawn-sh-at-startup "uwsm-app -- wlsunset -t 5000"
 spawn-sh-at-startup "uwsm-app -- swaybg -i ~/Bansuri/defaults/background.jpg -m fill"
 spawn-sh-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
