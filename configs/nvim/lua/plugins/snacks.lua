@@ -1,12 +1,38 @@
 return {
 	"folke/snacks.nvim",
-	config = function()
-		require("snacks").setup()
-	end,
 	opts = {
 		picker = {
 			enabled = true,
-			ui_select = true,
+			matcher = {
+				frecency = true,
+			},
+			layout = "telescope_like",
+			layouts = {
+				telescope_like = {
+					reverse = true,
+					layout = {
+						box = "horizontal",
+						border = "none",
+						width = 0.8,
+						height = 0.8,
+						{
+							box = "vertical",
+							border = "none",
+							{ win = "list", border = "single" },
+							{
+								win = "input",
+								height = 1,
+								border = "single",
+							},
+						},
+						{
+							win = "preview",
+							border = "single",
+							width = 0.55,
+						},
+					},
+				},
+			},
 		},
 		indent = { enabled = true },
 	},
