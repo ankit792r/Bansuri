@@ -1,21 +1,5 @@
 return {
-	-- {
-	-- 	"folke/tokyonight.nvim",
-	-- 	lazy = false,
-	-- 	priority = 1000,
-	-- 	config = function()
-	-- 		require("tokyonight").setup({
-	-- 			style = "night",
-	-- 			transparent = true,
-	-- 			styles = {
-	-- 				sidebars = "transparent",
-	-- 				floats = "transparent",
-	-- 			},
-	-- 		})
-	--
-	-- 		vim.cmd.colorscheme("tokyonight")
-	-- 	end,
-	-- },
+	-- Rose pine colorscheme
 	{
 		"rose-pine/neovim",
 		name = "rose-pine",
@@ -31,6 +15,8 @@ return {
 			vim.cmd("colorscheme rose-pine")
 		end,
 	},
+
+	-- Git signs
 	{
 		"lewis6991/gitsigns.nvim",
 		config = function()
@@ -39,5 +25,51 @@ return {
 				current_line_blame = true,
 			})
 		end,
+	},
+
+	-- Treesitter config
+	{
+		"nvim-treesitter/nvim-treesitter",
+		branch = "master",
+		lazy = false,
+		build = ":TSUpdate",
+		config = function()
+			local config = require("nvim-treesitter.configs")
+			config.setup({
+				auto_install = true,
+				highlight = { enable = true },
+				indent = { enable = true },
+			})
+		end,
+	},
+
+	-- Auto Save
+	{
+		"okuuva/auto-save.nvim",
+		version = "^1.0.0",
+		cmd = "ASToggle",
+		event = { "InsertLeave", "TextChanged" },
+		opts = {
+			enabled = true,
+			execute_message = {
+				enabled = true,
+				message = function()
+					return ("saved at " .. vim.fn.strftime("%H:%M:%S"))
+				end,
+				dim = 0.18,
+				cleaning_interval = 1250,
+			},
+			trigger_events = { -- See :h events
+				immediate_save = { "BufLeave", "FocusLost", "QuitPre", "VimSuspend" },
+				defer_save = { "InsertLeave", "TextChanged" },
+				cancel_deferred_save = { "InsertEnter" },
+			},
+			condition = nil,
+			write_all_buffers = false,
+			noautocmd = false,
+			lockmarks = false,
+			debounce_delay = 1500,
+			debug = false,
+		},
 	},
 }

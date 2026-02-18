@@ -1,4 +1,5 @@
 return {
+	-- Inline diagnostics
 	{
 		"rachartier/tiny-inline-diagnostic.nvim",
 		config = function()
@@ -23,6 +24,8 @@ return {
 			})
 		end,
 	},
+
+	-- Fidget
 	{
 		"j-hui/fidget.nvim",
 		event = "VeryLazy",
@@ -35,6 +38,8 @@ return {
 			},
 		},
 	},
+
+	-- Todo Commnets
 	{
 		"folke/todo-comments.nvim",
 		dependencies = { "nvim-lua/plenary.nvim" },
@@ -42,6 +47,8 @@ return {
 			require("todo-comments").setup()
 		end,
 	},
+
+	-- Mini Move
 	{
 		"nvim-mini/mini.move",
 		version = "*",
@@ -49,13 +56,8 @@ return {
 			require("mini.move").setup()
 		end,
 	},
-	{
-		"nvim-mini/mini.starter",
-		version = "*",
-		config = function()
-			require("mini.starter").setup()
-		end,
-	},
+
+	-- Mini Surround
 	{
 		"nvim-mini/mini.surround",
 		version = "*",
@@ -63,6 +65,8 @@ return {
 			require("mini.surround").setup()
 		end,
 	},
+
+	-- Nvim Highlight colors
 	{
 		"brenoprata10/nvim-highlight-colors",
 		config = function()
