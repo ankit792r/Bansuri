@@ -96,11 +96,6 @@ vim.filetype.add({
 
 vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
 
--- ⚙️ LazyVim globals (optional)
-vim.g.lazyvim_prettier_needs_config = true
-vim.g.lazyvim_cmp = "blink.cmp"
-vim.g.lazyvim_picker = "snacks"
-
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
 
