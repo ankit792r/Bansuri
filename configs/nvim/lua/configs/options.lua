@@ -102,3 +102,5 @@ vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
 vim.diagnostic.config({
   float = { border = "single" },
 })
+
+vim.o.winborder = 'single'
