@@ -38,7 +38,7 @@ vim.opt.showcmd = true
 vim.opt.laststatus = 3
 vim.opt.scrolloff = 4
 vim.opt.sidescrolloff = 8
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 vim.opt.wrap = false
 
 -- 🔙 Backspace
@@ -87,20 +87,18 @@ vim.cmd([[let &t_Ce = "\e[4:0m"]])
 -- 🟨 Comment formatting
 vim.opt.formatoptions:append({ "r" })
 
-
-vim.filetype.add({
-	extension = {
-		mdx = "mdx",
-	},
-})
-
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
-
 vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
 
-vim.diagnostic.config({
-  float = { border = "single" },
+vim.o.winborder = "single"
+vim.lsp.set_log_level("off")
+
+local max_w = math.floor(vim.o.columns * 0.6)
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+	max_width = max_w,
+	max_height = 25,
 })
 
-vim.o.winborder = 'single'
+vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
+	max_width = max_w,
+})
