@@ -3,7 +3,7 @@ waybar
 rofi-wayland
 mako
 waybar
-kitty
+alacritty
 xdg-desktop-portal-gtk
 xdg-desktop-portal-gnome
 xwayland-satellite

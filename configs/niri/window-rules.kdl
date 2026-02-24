@@ -3,6 +3,7 @@ window-rule {
 }
 
 window-rule {
+  match app-id=r#"Alacritty"#
   match app-id=r#"kitty"#
   opacity 0.8
 }
