@@ -12,8 +12,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
-
 vim.opt.rtp:prepend(lazypath)
+
 vim.g.mapleader = " "
 vim.g.maplocalleader = "\\"
 
@@ -21,41 +21,18 @@ require("lazy").setup({
 	spec = {
 		{ import = "plugins" },
 	},
+	defaults = { lazy = false },
 	install = { colorscheme = { "tokyonight", "habamax" } },
 	checker = { enable = true },
-	ui = {
-		border = "single",
-	},
+	ui = { border = "single" },
 	performance = {
 		rtp = {
 			disabled_plugins = {
-				"2html_plugin",
-				"tohtml",
-				"getscript",
-				"getscriptPlugin",
 				"gzip",
-				"logipat",
-				"netrw",
-				"netrwPlugin",
-				"netrwSettings",
-				"netrwFileHandlers",
-				"matchit",
-				"tar",
 				"tarPlugin",
-				"rrhelper",
-				"spellfile_plugin",
-				"vimball",
-				"vimballPlugin",
-				"zip",
-				"zipPlugin",
+				"tohtml",
 				"tutor",
-				"rplugin",
-				"syntax",
-				"synmenu",
-				"optwin",
-				"compiler",
-				"bugreport",
-				"ftplugin",
+				"zipPlugin",
 			},
 		},
 	},
