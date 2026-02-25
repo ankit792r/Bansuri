@@ -6,3 +6,5 @@ vim.keymap.set("n", "<C-l>", ":wincmd l<CR>")
 vim.keymap.set("n", "<esc>", "<cmd>noh<CR>")
 vim.keymap.set("n", "<leader>sr", ":%s/")
 vim.keymap.set("x", "<leader>p", [["_dP]])
+
+-- vim.keymap.set("n", "<leader>e", vim.cmd.Ex)
