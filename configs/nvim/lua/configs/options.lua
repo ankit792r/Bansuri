@@ -67,9 +67,6 @@ vim.lsp.inlay_hint.enable(true)
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
-vim.g.loaded_netrw = 1
-vim.g.loaded_netrwPlugin = 1
-
 -- 🧙 Persistent Sessions
 vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,terminal,localoptions"
 
