@@ -62,8 +62,6 @@ vim.opt.undofile = true
 vim.opt.backup = false
 vim.opt.backupskip = { "/tmp/*", "/private/tmp/*" }
 
-vim.lsp.inlay_hint.enable(true)
-
 vim.opt.splitright = true
 vim.opt.splitbelow = true
 
