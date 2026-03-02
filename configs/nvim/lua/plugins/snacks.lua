@@ -1,15 +1,16 @@
 return {
 	"folke/snacks.nvim",
+	priority = 1000,
+	lazy = false,
 	opts = {
 		picker = {
 			enabled = true,
 			matcher = {
 				frecency = true,
 			},
-			layout = "telescope_like",
+			layout = "new_layout",
 			layouts = {
-				telescope_like = {
-					reverse = true,
+				new_layout = {
 					layout = {
 						box = "horizontal",
 						border = "none",
@@ -18,12 +19,13 @@ return {
 						{
 							box = "vertical",
 							border = "none",
-							{ win = "list", border = "single" },
+              gap = 0,
 							{
 								win = "input",
 								height = 1,
 								border = "single",
 							},
+							{ win = "list", border = "single" },
 						},
 						{
 							win = "preview",
