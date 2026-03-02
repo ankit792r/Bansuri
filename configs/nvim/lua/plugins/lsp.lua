@@ -63,11 +63,4 @@ return {
 			vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {})
 		end,
 	},
-
-	-- Ts Tools
-	{
-		"pmizio/typescript-tools.nvim",
-		dependencies = { "nvim-lua/plenary.nvim", "neovim/nvim-lspconfig" },
-		opts = {},
-	},
 }
