@@ -28,6 +28,7 @@ pipewire-jack
 pipewire-libcamera
 wireplumber
 udiskie
+yazi
 
 fontconfig
 gtk3
