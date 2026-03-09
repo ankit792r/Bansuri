@@ -5,14 +5,14 @@ width=360
 height=120
 margin=10
 padding=6
-border-size=2
+border-size=0
 border-radius=0
 layer=overlay
 anchor=top-right
 
 background-color=#1a1b26cc
 text-color=#c0caf5
-border-color=#403d52
+border-color=#34333f
 
 # Icons
 icons=1
@@ -31,12 +31,12 @@ progress-color=#283457
 [urgency=low]
 background-color=#1a1b26cc
 text-color=#6e6a86
-border-color=#403d52
+border-color=#34333f
 
 [urgency=normal]
 background-color=#1a1b26cc
 text-color=#c0caf5
-border-color=#797593
+border-color=#34333f
 
 [urgency=high]
 background-color=#1a1b26cc
