@@ -76,19 +76,11 @@ return {
 		},
 
 		{
-			"<leader>/",
+			"<leader>.",
 			function()
 				Snacks.picker.grep()
 			end,
 			desc = "Grep",
-		},
-
-		{
-			"<leader>fg",
-			function()
-				Snacks.picker.git_files()
-			end,
-			desc = "Find Git Files",
 		},
 
 		{
