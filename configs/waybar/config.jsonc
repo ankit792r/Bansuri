@@ -7,6 +7,8 @@
   "modules-right": [
     "pulseaudio",
     "backlight",
+    "disk#root",
+    "disk#home",
     "network",
     "cpu",
     "memory",
@@ -31,6 +33,18 @@
     "format": "MEM {used:0.1f}G/{total:0.1f}G"
   },
 
+  "disk#root": {
+    "interval": 30,
+    "format": "{percentage_used}%/{total}",
+    "path": "/",
+  },
+
+  "disk#home": {
+    "interval": 30,
+    "format": "{percentage_used}%/{total}",
+    "path": "/home"
+  },
+
   "temperature": {
     "critical-threshold": 80,
     "format": "TEMP {temperatureC}°C"
@@ -49,8 +63,8 @@
   },
 
   "network": {
-    "format-wifi": "{essid}",
-    "format-ethernet": "{ipaddr}/{cidr}",
+    "format-wifi": "WIFI {essid}",
+    "format-ethernet": "ETH {ipaddr}/{cidr}",
     "tooltip-format": "{ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "Disconnected",

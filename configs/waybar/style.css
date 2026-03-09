@@ -8,8 +8,8 @@
 
 /* Bar */
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
+  background-color: rgba(0, 0, 0, 0.65);
+  color: #c0caf5;
   transition-property: background-color;
   transition-duration: 0.5s;
 }
@@ -28,32 +28,32 @@ button {
 
 button:hover {
   background-color: #1f1d2e; /* surface */
-  color: #e0def4;
+  color: #c0caf5;
 }
 
 /* Workspaces */
 #workspaces {
-  margin: 0 6px;
+  margin: 0 2px;
 }
 
 #workspaces button {
   padding: 0 8px;
   background: none;
-  color: #e0def4;
+  color: #c0caf5;
 }
 
 #workspaces button.active {
-  border-bottom: 2px solid #c4a7e7; /* iris */
+  border-bottom: 2px solid #c0caf5; /* iris */
 }
 
 #workspaces button.urgent {
-  border-bottom: 2px solid #eb6f92; /* love */
+  border-bottom: 2px solid #b4637a; /* love */
 }
 
 /* Window title */
 #window {
-  padding: 0 10px;
-  color: #e0def4;
+  padding: 0 6px;
+  color: #c0caf5;
 }
 
 /* Modules (Right side) */
@@ -63,28 +63,30 @@ button:hover {
 #memory,
 #temperature,
 #network,
+#disk,
+#load,
 #pulseaudio {
-  padding: 0 10px;
-  color: #e0def4;
+  padding: 0 8px;
+  color: #c0caf5;
 }
 
 /* Battery states */
 #battery.charging,
 #battery.plugged {
-  background-color: #31748f; /* pine */
-  color: #e0def4;
+  background-color: #286983; /* pine */
+  color: #c0caf5;
 }
 
 #battery.critical:not(.charging),
 #battery.warning:not(.charging) {
-  background-color: #eb6f92; /* love */
-  color: #191724;
+  background-color: #b4637a; /* love */
+  color: #c0caf5;
 }
 
 /* Temperature */
 #temperature.critical {
-  background-color: #eb6f92; /* love */
-  color: #191724;
+  background-color: #b4637a; /* love */
+  color: #c0caf5;
 }
 
 /* Tray */
@@ -95,7 +97,7 @@ button:hover {
 }
 
 #tray > .needs-attention {
-  color: #eb6f92; /* love */
-  border-bottom-color: #eb6f92;
+  color: #b4637a; /* love */
+  border-bottom-color: #b4637a;
 }
 
