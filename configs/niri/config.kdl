@@ -8,14 +8,14 @@ include "./bindings.kdl"
 include "./misc.kdl"
 
 overview {
-   zoom 0.5
+   zoom 0.6
    workspace-shadow {
 	   off
    }
 }
 
 layout {
-    gaps 4
+    gaps 0
     always-center-single-column
     center-focused-column "never"
     background-color "transparent"
@@ -31,14 +31,14 @@ layout {
 
     border {
      width 2
-      active-color "#797593"
+      active-color "#34333f"
       inactive-color "#1f1d2e"
     }
 
     struts {
-        left 2
-        right 2
-        top 2
-        bottom 2
+        left 0
+        right 0
+        top 0
+        bottom 0
     }
 }

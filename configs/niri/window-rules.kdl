@@ -5,7 +5,7 @@ window-rule {
 window-rule {
   match app-id=r#"Alacritty"#
   match app-id=r#"kitty"#
-  opacity 0.8
+  opacity 0.75
 }
 
 // Assorted window rules.
