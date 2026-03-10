@@ -19,7 +19,7 @@ return {
 						{
 							box = "vertical",
 							border = "none",
-              gap = 0,
+							gap = 0,
 							{
 								win = "input",
 								height = 1,
@@ -60,27 +60,25 @@ return {
 
 	keys = {
 		{
-			"<leader><leader>",
+			"<leader><space>",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.buffers()
 			end,
-			desc = "Buffers",
 		},
 
 		{
-			"<leader>,",
+			"<leader>ff",
 			function()
-				Snacks.picker.buffers()
+				Snacks.picker.files()
 			end,
 			desc = "Find Files",
 		},
 
 		{
-			"<leader>.",
+			"<leader>fg",
 			function()
 				Snacks.picker.grep()
 			end,
-			desc = "Grep",
 		},
 
 		{
@@ -89,6 +87,38 @@ return {
 				Snacks.picker.recent()
 			end,
 			desc = "Recent",
+		},
+
+		{
+			'<leader>s"',
+			function()
+				Snacks.picker.registers()
+			end,
+			desc = "Registers",
+		},
+
+		{
+			"<leader>sb",
+			function()
+				Snacks.picker.lines()
+			end,
+			desc = "Buffer Lines",
+		},
+
+		{
+			"<leader>sj",
+			function()
+				Snacks.picker.jumps()
+			end,
+			desc = "Jumps",
+		},
+
+		{
+			"<leader>sm",
+			function()
+				Snacks.picker.marks()
+			end,
+			desc = "Marks",
 		},
 	},
 }
