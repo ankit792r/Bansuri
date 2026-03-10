@@ -32,7 +32,7 @@ layout {
     border {
      width 2
       active-color "#34333f"
-      inactive-color "#1f1d2e"
+      inactive-color "#000000"
     }
 
     struts {
