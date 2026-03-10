@@ -82,4 +82,22 @@ return {
 			require("nvim-highlight-colors").setup()
 		end,
 	},
+
+	-- Nvim biscuits
+	{
+		"code-biscuits/nvim-biscuits",
+		dependencies = {
+			"nvim-treesitter/nvim-treesitter",
+		},
+		opts = {
+			-- Config goes here
+		},
+	},
+
+	{
+		"mluders/comfy-line-numbers.nvim",
+		config = function()
+			require("comfy-line-numbers").setup()
+		end,
+	},
 }
