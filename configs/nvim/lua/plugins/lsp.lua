@@ -46,7 +46,6 @@ return {
 			-- Diagnostics (CRITICAL since virtual_text is off)
 			map("n", "[d", vim.diagnostic.goto_prev, "Prev Diagnostic")
 			map("n", "]d", vim.diagnostic.goto_next, "Next Diagnostic")
-			map("n", "<leader>cd", vim.diagnostic.open_float, "Show Line Diagnostics")
 
 			map("n", "<leader>cd", function()
 				vim.diagnostic.open_float({
