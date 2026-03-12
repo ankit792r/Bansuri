@@ -40,15 +40,6 @@ return {
 		end,
 	},
 
-	-- Mini indent
-	{
-		"nvim-mini/mini.indentscope",
-		version = "*",
-		config = function()
-			require("mini.indentscope")
-		end,
-	},
-
 	-- Nvim Highlight colors
 	{
 		"brenoprata10/nvim-highlight-colors",
@@ -72,7 +63,7 @@ return {
 			far.setup({
 				windowCreationParams = {
 					split = "vertical",
-					width = 40
+					width = 40,
 				},
 			})
 
