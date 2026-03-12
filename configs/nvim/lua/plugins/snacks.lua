@@ -1,3 +1,6 @@
+vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#141414", nocombine = true }) 
+vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#444444", nocombine = true })
+
 return {
 	"folke/snacks.nvim",
 	priority = 1000,
@@ -39,7 +42,17 @@ return {
 		indent = {
 			enabled = true,
 			only_scope = true,
+			only_current = false,
 			animate = { enabled = false },
+			scope = {
+				enabled = true,
+				underline = false,
+				only_current = true,
+			},
+			chunk = {
+				enabled = true,
+				only_current = true,
+			},
 		},
 	},
 	sort_lastused = false,
@@ -62,14 +75,14 @@ return {
 		{
 			"<leader><space>",
 			function()
-				Snacks.picker.buffers()
+				Snacks.picker.files()
 			end,
 		},
 
 		{
-			"<leader>ff",
+			"<leader>fb",
 			function()
-				Snacks.picker.files()
+				Snacks.picker.buffers()
 			end,
 			desc = "Find Files",
 		},
@@ -90,7 +103,7 @@ return {
 		},
 
 		{
-			'<leader>s"',
+			"<leader>sw",
 			function()
 				Snacks.picker.registers()
 			end,
