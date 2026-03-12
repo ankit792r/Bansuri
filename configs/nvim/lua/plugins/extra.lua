@@ -63,4 +63,34 @@ return {
 			require("comfy-line-numbers").setup()
 		end,
 	},
+
+	-- find and replace
+	{
+		"MagicDuck/grug-far.nvim",
+		config = function()
+			local far = require("grug-far")
+			far.setup({
+				windowCreationParams = {
+					split = "vertical",
+					width = 40
+				},
+			})
+
+			vim.keymap.set({ "n", "x" }, "<leader>si", function()
+				far.open({
+					prefills = {
+						paths = vim.fn.expand("%"),
+					},
+				})
+			end, { desc = "grug-far: Search in current buffer" })
+
+			vim.keymap.set({ "n", "x" }, "<leader>so", function()
+				far.open({
+					prefills = {
+						paths = vim.fn.getcwd(),
+					},
+				})
+			end, { desc = "grug-far: Search in root dir" })
+		end,
+	},
 }
