@@ -3,11 +3,13 @@
 overall = { bg = "#000000" }
 
 # : Manager (The main file list area)
-[manager]
+[mgr]
 # Remove borders by setting symbol to empty and style to hidden
 border_symbol = " "
-border_style  = { fg = "#000000" } 
+border_style  = { fg = "reset" } 
 title_format  = "" # Removes the "Current Directory" title from the top border area
+
+preview_hovered = { underline = true }
 
 # Find
 find_keyword  = { fg = "#f6c177", bold = true, italic = true, underline = true }
@@ -91,7 +93,7 @@ body       = { fg = "#e0def4" }
 list       = { fg = "#e0def4" }
 btn_yes    = { fg = "#232136", bg = "#3e8fb0", bold = true }
 btn_no     = { fg = "#232136", bg = "#e0def4", bold = true }
-btn_labels = [ "  [y]es  ", "  (n)o  " ]
+btn_labels = [ "  [y]es  ", "  [n]o  " ]
 
 # : Spotter
 [spot]
