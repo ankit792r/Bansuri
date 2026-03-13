@@ -12,13 +12,13 @@ iputils
 usbutils
 pciutils
 
-# yazi and related packages
+# utility packages
 yazi
 ffmpeg
 jq
 poppler
 fd
-rg
+ripgrep
 fzf
 resvg
 xclip
