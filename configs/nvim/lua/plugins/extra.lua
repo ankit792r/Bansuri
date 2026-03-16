@@ -48,6 +48,7 @@ return {
 		end,
 	},
 
+	-- comfy number line
 	{
 		"mluders/comfy-line-numbers.nvim",
 		config = function()

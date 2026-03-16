@@ -1,4 +1,5 @@
-vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#141414", nocombine = true }) 
+-- Snacks indent highlight color
+vim.api.nvim_set_hl(0, "SnacksIndent", { fg = "#141414", nocombine = true })
 vim.api.nvim_set_hl(0, "SnacksIndentScope", { fg = "#444444", nocombine = true })
 
 return {
@@ -53,6 +54,9 @@ return {
 				enabled = true,
 				only_current = true,
 			},
+		},
+		words = {
+			enabled = true,
 		},
 	},
 	sort_lastused = false,

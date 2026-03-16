@@ -55,4 +55,30 @@ return {
 			debug = false,
 		},
 	},
+
+	-- Outline
+	{
+		"hedyhli/outline.nvim",
+		config = function()
+			vim.keymap.set("n", "<leader>oc", "<cmd>OutlineClose<CR>", { desc = "Close Outline" })
+
+			local outline = require("outline")
+			outline.setup({
+				outline_window = {
+					width = 20,
+					auto_width = {
+						enabled = true,
+						max_width = 25,
+					},
+					focus_on_open = false,
+				},
+			})
+
+			vim.api.nvim_create_autocmd("VimEnter", {
+				callback = function()
+					outline.open()
+				end,
+			})
+		end,
+	},
 }
