@@ -40,7 +40,17 @@ def link_home_dotfiles(source_dir="defaults"):
         target.symlink_to(item)
 
 def link_niri_desktop(source_dir="defaults"):
-    pass
+    source = Path(f"{source_dir}/niri-uwsm.desktop").resolve()
+    target = Path("/usr/share/wayland-sessions/niri.desktop")
+
+    if target.exists() or target.is_symlink():
+        if target.is_symlink() or target.is_file():
+            target.unlink()
+        elif target.is_dir():
+            shutil.rmtree(target)
+
+    print(f"Copying {source} → {target}")
+    target.symlink_to(source)
 
 
 def copy_sddm_theme(source_dir="defaults"):
