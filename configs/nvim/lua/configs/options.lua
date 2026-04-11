@@ -1,6 +1,3 @@
--- 🔑 Leader key
-vim.g.mapleader = " "
-
 -- 🌐 Encoding
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
@@ -71,9 +68,6 @@ vim.o.sessionoptions = "blank,buffers,curdir,folds,help,tabpages,winsize,winpos,
 vim.wo.number = true
 vim.opt.showmode = false
 vim.opt.cmdheight = 0
-
-vim.cmd([[ autocmd RecordingEnter * set cmdheight=1 ]])
-vim.cmd([[ autocmd RecordingLeave * set cmdheight=0 ]])
 
 -- ✨ Undercurl
 vim.cmd([[let &t_Cs = "\e[4:3m"]])
