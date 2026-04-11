@@ -8,7 +8,7 @@ return {
 			require("mason").setup({ ui = { border = "single" } })
 			require("mason-lspconfig").setup({
 				auto_install = true,
-				ensure_installed = { "lua_ls", "pyright", "ts_ls" },
+				ensure_installed = { "lua_ls" },
 			})
 		end,
 	},

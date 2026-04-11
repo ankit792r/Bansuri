@@ -92,6 +92,14 @@ return {
 		},
 
 		{
+			"<leader>ff",
+			function()
+				Snacks.picker.smart()
+			end,
+			desc = "Find Files",
+		},
+
+		{
 			"<leader>fg",
 			function()
 				Snacks.picker.grep()
