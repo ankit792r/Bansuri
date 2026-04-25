@@ -74,7 +74,7 @@ return {
 						paths = vim.fn.expand("%"),
 					},
 				})
-			end, { desc = "grug-far: Search in current buffer" })
+			end, { desc = "search in current buf" })
 
 			vim.keymap.set({ "n", "x" }, "<leader>so", function()
 				far.open({
@@ -82,7 +82,19 @@ return {
 						paths = vim.fn.getcwd(),
 					},
 				})
-			end, { desc = "grug-far: Search in root dir" })
+			end, { desc = "Search in root dir" })
 		end,
+	},
+
+	{
+		"folke/which-key.nvim",
+		event = "VeryLazy",
+		opts = {
+			preset = "helix",
+			win = {
+				title = false,
+				border = "single",
+			},
+		},
 	},
 }

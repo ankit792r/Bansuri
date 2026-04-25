@@ -15,7 +15,7 @@ overview {
 }
 
 layout {
-    gaps 6
+    gaps 0
     always-center-single-column
     center-focused-column "never"
     background-color "transparent"
@@ -30,8 +30,8 @@ layout {
     focus-ring { off; }
 
     border {
-     width 2
-      active-color "#4B4A5B"
+      width 2
+      active-color "#74738C"
       inactive-color "#34333f"
     }
 

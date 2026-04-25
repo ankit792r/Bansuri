@@ -74,11 +74,15 @@ return {
 				},
 			})
 
-			vim.api.nvim_create_autocmd("VimEnter", {
-				callback = function()
-					outline.open()
-				end,
-			})
+			vim.keymap.set("n", "<leader>ll", function()
+				outline.open()
+			end)
+
+			-- vim.api.nvim_create_autocmd("VimEnter", {
+			-- 	callback = function()
+			-- 		outline.open()
+			-- 	end,
+			-- })
 		end,
 	},
 }

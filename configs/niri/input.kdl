@@ -10,6 +10,7 @@ input {
       tap 
       natural-scroll 
       accel-profile "flat"
+      accel-speed 0.6
     }
 
     mouse {

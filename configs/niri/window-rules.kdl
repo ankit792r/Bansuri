@@ -1,14 +1,10 @@
+// Global rule: apply to everything
 window-rule {
-   draw-border-with-background false
+    draw-border-with-background false
+    opacity 0.9
 }
 
-window-rule {
-  match app-id=r#"Alacritty"#
-  match app-id=r#"kitty"#
-  opacity 0.75
-}
-
-// Assorted window rules.
+// Floating utility windows
 window-rule {
     match app-id=r#"^Pinentry-gtk$"#
     match app-id=r#"^Tk$"#
@@ -23,6 +19,7 @@ window-rule {
     open-floating true
 }
 
+// Custom floating apps
 window-rule {
     match app-id=r#"^dot\.floating\.ghostty$"#
     match app-id=r#"^dot\.floating\.thunar$"#
@@ -32,6 +29,7 @@ window-rule {
     default-window-height { proportion 0.5; }
 }
 
+// Satty specific
 window-rule {
     match app-id=r#"^com\.gabm\.satty$"#
     open-floating true
@@ -39,17 +37,18 @@ window-rule {
     min-height 300
 }
 
+// Firefox override: NO transparency
 window-rule {
-   match app-id=r#"firefox"#
-   default-column-width { proportion 0.75; }
+    match app-id=r#"firefox"#
+
+    opacity 1.0
+    default-column-width { proportion 0.75; }
 }
 
+// Secrets managers: block screenshots
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
 
     block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
 }
