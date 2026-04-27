@@ -8,8 +8,8 @@
     "pulseaudio",
     "backlight",
     "disk#root",
-    "disk#home",
     "network",
+    "bluetooth",
     "cpu",
     "memory",
     "temperature",
@@ -72,6 +72,14 @@
     "on-click": "wlctl"
   },
 
+  "bluetooth": {
+    "format": "BT {status}",
+    "format-disabled": "BT OFF",
+    "format-connected": "BT {device_alias}",
+    "tooltip-format": "{controller_alias}\n{num_connections} connected",
+    "on-click": "bluetui"
+  },
+
   "pulseaudio": {
     "format": "{volume}%",
     "format-bluetooth": "{volume}%",
@@ -82,12 +90,12 @@
   },
 
   "backlight": {
-    "format": "{percent}% {icon}"
+    "format": "{percent}%"
   },
 
   "tray": {
-      "icon-size": 18,
-      "spacing": 5
-    }
+    "icon-size": 18,
+    "spacing": 5
+  }
 }
 
