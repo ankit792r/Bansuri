@@ -39,11 +39,11 @@
     "path": "/",
   },
 
-  "disk#home": {
-    "interval": 30,
-    "format": "{percentage_used}%/{total}",
-    "path": "/home"
-  },
+  // "disk#home": {
+  //   "interval": 30,
+  //   "format": "{percentage_used}%/{total}",
+  //   "path": "/home"
+  // },
 
   "temperature": {
     "critical-threshold": 80,
@@ -68,7 +68,8 @@
     "tooltip-format": "{ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP)",
     "format-disconnected": "Disconnected",
-    "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    "format-alt": "{ifname}: {ipaddr}/{cidr}",
+    "on-click": "wlctl"
   },
 
   "pulseaudio": {

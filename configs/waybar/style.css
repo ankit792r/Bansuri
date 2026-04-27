@@ -89,6 +89,16 @@ button:hover {
   color: #c0caf5;
 }
 
+#network.disconnected {
+  background-color: #b4637a; /* red (love) */
+  color: #c0caf5;
+}
+
+#network.disabled {
+  background-color: #b4637a;
+  color: #c0caf5;
+}
+
 /* Tray */
 #tray {
   background-color: transparent;
