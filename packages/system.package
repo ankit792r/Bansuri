@@ -12,6 +12,21 @@ iputils
 usbutils
 pciutils
 
+bluetui
+networkmanager
+
+bluez-obex
+bluez-tools
+bluez-mesh
+bluez-cups
+
+cups-pdf
+cups-browsed
+
+ipp-usb
+
+colord
+
 # utility packages
 yazi
 ffmpeg
