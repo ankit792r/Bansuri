@@ -1,7 +1,11 @@
 // Global rule: apply to everything
 window-rule {
     draw-border-with-background false
-    opacity 0.9
+    opacity 0.75
+
+    background-effect {
+        blur true
+    }
 }
 
 // Floating utility windows
