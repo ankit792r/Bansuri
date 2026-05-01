@@ -1,14 +1,17 @@
-// Global rule: apply to everything
 window-rule {
-    draw-border-with-background false
-    opacity 0.75
-
-    background-effect {
-        blur true
-    }
+    draw-border-with-background false 
 }
 
-// Floating utility windows
+
+window-rule {
+  match app-id=r#"^kitty$"#
+
+  opacity 0.85
+  background-effect {
+    blur true
+  }
+}
+
 window-rule {
     match app-id=r#"^Pinentry-gtk$"#
     match app-id=r#"^Tk$"#
@@ -23,7 +26,6 @@ window-rule {
     open-floating true
 }
 
-// Custom floating apps
 window-rule {
     match app-id=r#"^dot\.floating\.ghostty$"#
     match app-id=r#"^dot\.floating\.thunar$"#
@@ -33,7 +35,6 @@ window-rule {
     default-window-height { proportion 0.5; }
 }
 
-// Satty specific
 window-rule {
     match app-id=r#"^com\.gabm\.satty$"#
     open-floating true
@@ -41,7 +42,6 @@ window-rule {
     min-height 300
 }
 
-// Firefox override: NO transparency
 window-rule {
     match app-id=r#"firefox"#
 
@@ -49,7 +49,6 @@ window-rule {
     default-column-width { proportion 0.75; }
 }
 
-// Secrets managers: block screenshots
 window-rule {
     match app-id=r#"^org\.keepassxc\.KeePassXC$"#
     match app-id=r#"^org\.gnome\.World\.Secrets$"#
