@@ -36,6 +36,9 @@ gtk3
 gtk4
 qt5ct
 qt6ct
+mtpfs
+gvfs-mtp
+android-udev
 
 inter-font
 adobe-source-sans-fonts
