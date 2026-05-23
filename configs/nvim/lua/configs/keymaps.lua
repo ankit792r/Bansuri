@@ -18,3 +18,13 @@ vim.keymap.set("i", "<M-l>", "<C-o>l", { noremap = true, silent = true })
 vim.keymap.set("i", "<M-w>", "<C-o>w")
 vim.keymap.set("i", "<M-e>", "<C-o>e")
 vim.keymap.set("i", "<M-b>", "<C-o>b")
+
+-- Toggle terminal with Control + \ (Backslash)
+vim.keymap.set('n', '<C-\\>', '<Cmd>ToggleTerm<CR>', { desc = "Toggle terminal" })
+vim.keymap.set('t', '<C-\\>', '<Cmd>ToggleTerm<CR>', { desc = "Toggle terminal" })
+
+-- Terminal mode window navigation
+vim.keymap.set("t", "<C-h>", [[<C-\><C-n><C-w>h]])
+vim.keymap.set("t", "<C-j>", [[<C-\><C-n><C-w>j]])
+vim.keymap.set("t", "<C-k>", [[<C-\><C-n><C-w>k]])
+vim.keymap.set("t", "<C-l>", [[<C-\><C-n><C-w>l]])
