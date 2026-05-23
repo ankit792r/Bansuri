@@ -10,6 +10,11 @@ return {
 		end,
 	},
 
+  -- vim-fugitive
+  {
+    "https://github.com/tpope/vim-fugitive",
+  },
+
 	-- Auto Save
 	{
 		"okuuva/auto-save.nvim",
