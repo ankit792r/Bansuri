@@ -66,6 +66,7 @@ button:hover {
 #bluetooth,
 #disk,
 #load,
+#backlight,
 #pulseaudio {
   padding: 0 8px;
   color: #c0caf5;
@@ -74,7 +75,7 @@ button:hover {
 /* Battery states */
 #battery.charging,
 #battery.plugged {
-  background-color: #286983; /* pine */
+  background-color: #286983;
   color: #c0caf5;
 }
 

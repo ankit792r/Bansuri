@@ -34,8 +34,8 @@
   },
 
   "disk#root": {
-    "interval": 30,
-    "format": "{percentage_used}%/{total}",
+    "interval": 60,
+    "format": "DISK {percentage_used}%/{total}",
     "path": "/",
   },
 
@@ -63,7 +63,7 @@
   },
 
   "network": {
-    "format-wifi": "WIFI {essid}",
+    "format-wifi": "WiFi {essid}",
     "format-ethernet": "ETH {ipaddr}/{cidr}",
     "tooltip-format": "{ifname} via {gwaddr}",
     "format-linked": "{ifname} (No IP)",
@@ -81,8 +81,8 @@
   },
 
   "pulseaudio": {
-    "format": "{volume}%",
-    "format-bluetooth": "{volume}%",
+    "format": "VOL {volume}%",
+    "format-bluetooth": "BT-VOL {volume}%",
     "format-muted": "MUTED",
     "format-source": "{volume}%",
     "format-source-muted": "MUTED",
@@ -90,7 +90,7 @@
   },
 
   "backlight": {
-    "format": "{percent}%"
+    "format": "DISP {percent}%"
   },
 
   "tray": {
