@@ -12,6 +12,9 @@ return {
 			matcher = {
 				frecency = true,
 				cwd_bonus = true,
+				fuzzy = true,
+				smartcase = true,
+				ignorecase = true,
 			},
 			layout = "new_layout",
 			layouts = {
@@ -98,12 +101,22 @@ return {
 		{
 			"<leader><space>",
 			function()
-				Snacks.picker.files({
+				Snacks.picker.smart({
 					cwd = vim.fn.getcwd(),
 				})
 			end,
 			desc = "open file picker",
 		},
+
+    {
+      "<leader>,",
+      function()
+        Snacks.picker.buffers({
+          cwd = vim.fn.getcwd(),
+        })
+      end,
+      desc = "Buffers",
+    },
 
 		{
 			"<leader>e",
@@ -116,7 +129,7 @@ return {
 		},
 
 		{
-			"<leader>bb",
+			"<leader>fb",
 			function()
 				Snacks.picker.buffers({
 					cwd = vim.fn.getcwd(),
@@ -128,7 +141,7 @@ return {
 		{
 			"<leader>ff",
 			function()
-				Snacks.picker.smart({
+				Snacks.picker.files({
 					cwd = vim.fn.getcwd(),
 				})
 			end,
@@ -136,7 +149,7 @@ return {
 		},
 
 		{
-			"<leader>fg",
+			"<leader>sg",
 			function()
 				Snacks.picker.grep({
 					cwd = vim.fn.getcwd(),
@@ -144,14 +157,34 @@ return {
 			end,
 			"Find grep files",
 		},
+
 		{
-			"<leader>/",
+			"<leader>sb",
+			function()
+				Snacks.picker.lines()
+			end,
+			desc = "Buffer Lines",
+		},
+
+		{
+			"<leader>sB",
 			function()
 				Snacks.picker.grep_buffers({
 					cwd = vim.fn.getcwd(),
 				})
 			end,
 			desc = "Search Open Buffers",
+		},
+
+		{
+			"<leader>sw",
+			function()
+				Snacks.picker.grep_word({
+					cwd = vim.fn.getcwd(),
+				})
+			end,
+			desc = "Visual selection or word",
+			mode = { "n", "x" },
 		},
 
 		{
@@ -164,8 +197,9 @@ return {
 			desc = "Recent files",
 		},
 
+		-- search
 		{
-			"<leader>sw",
+			'<leader>s"',
 			function()
 				Snacks.picker.registers()
 			end,
@@ -173,11 +207,40 @@ return {
 		},
 
 		{
-			"<leader>sb",
+			"<leader>sd",
 			function()
-				Snacks.picker.lines()
+				Snacks.picker.diagnostics()
 			end,
-			desc = "Buffer Lines",
+			desc = "Diagnostics",
+		},
+		{
+			"<leader>sD",
+			function()
+				Snacks.picker.diagnostics_buffer()
+			end,
+			desc = "Buffer Diagnostics",
+		},
+		{
+			"<leader>sh",
+			function()
+				Snacks.picker.help()
+			end,
+			desc = "Help Pages",
+		},
+		{
+			"<leader>sH",
+			function()
+				Snacks.picker.highlights()
+			end,
+			desc = "Highlights",
+		},
+
+		{
+			"<leader>s/",
+			function()
+				Snacks.picker.search_history()
+			end,
+			desc = "Search History",
 		},
 
 		{
