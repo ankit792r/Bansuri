@@ -1,14 +1,56 @@
 window-rule {
   draw-border-with-background false
+
+  background-effect {
+    blur true
+  }
 }
 
 window-rule {
-  match app-id=r#"^kitty$"#
+  match app-id="^kitty$"
+  match app-id="^Alacritty$"
 
   opacity 0.88
-  // background-effect {
-  //   blur true
-  // }
+  background-effect {
+    blur true
+  }
+}
+
+window-rule {
+  match title="^Picture-in-Picture$"
+  match title=r#"^Picture in picture$"#
+  match app-id="org.kde.kdeconnect.daemon"
+  open-floating true
+  open-focused false
+  default-floating-position x=20 y=20 relative-to="bottom-right"
+  default-column-width { proportion 0.22; }
+  default-window-height { proportion 0.22; }
+  shadow {
+    on
+    softness 60
+    spread 10
+    offset x=0 y=10
+    draw-behind-window true
+    color "#000000"
+  }
+}
+
+
+window-rule {
+  match title="^save to$"
+  match title="^Library$"
+  match title="^File Upload$"
+  open-floating true
+  default-column-width { fixed 1000; }
+  default-window-height { fixed 600; }
+  shadow {
+    on
+    softness 60
+    spread 10
+    offset x=0 y=10
+    draw-behind-window true
+    color "#000000"
+  }
 }
 
 window-rule {
@@ -23,6 +65,35 @@ window-rule {
   match app-id=r#"^firefox$"# title=r#"^(Picture-in-Picture|Library|About Mozilla Firefox)$"#
 
   open-floating true
+}
+
+window-rule {
+  match app-id="yazi"
+  open-maximized true
+}
+
+window-rule {
+  match app-id="bluetui"
+  match app-id="pulsemixer"
+  match app-id="nmtui"
+  match app-id="dashboard"
+  match app-id="ncdu"
+  match app-id="battery"
+  match app-id="sensors"
+  match app-id="wlctl"
+  open-floating true
+  open-focused true
+  default-floating-position x=20 y=20 relative-to="bottom-right"
+  default-column-width { proportion 0.50; }
+  default-window-height { proportion 0.55; }
+  shadow {
+    on
+    softness 60
+    spread 10
+    offset x=0 y=10
+    draw-behind-window true
+    color "#000000"
+  }
 }
 
 window-rule {
