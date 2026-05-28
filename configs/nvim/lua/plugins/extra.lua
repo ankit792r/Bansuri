@@ -95,6 +95,7 @@ return {
 			win = {
 				title = false,
 				border = "single",
+        zindex = 1000,
 			},
 		},
 

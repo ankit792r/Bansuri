@@ -80,14 +80,3 @@ vim.api.nvim_set_hl(0, "StatusLine", { bg = "NONE" })
 vim.api.nvim_set_hl(0, "StatusLineNC", { bg = "NONE" })
 
 vim.o.winborder = "single"
-vim.lsp.set_log_level("off")
-
-local max_w = math.floor(vim.o.columns * 0.6)
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-	max_width = max_w,
-	max_height = 25,
-})
-
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-	max_width = max_w,
-})
