@@ -10,8 +10,12 @@ include "./misc.kdl"
 
 overview {
   zoom 0.6
+
   workspace-shadow {
-    off
+    softness 300
+    spread 20
+    offset x=0 y=0
+    color "#000000"
   }
 }
 
@@ -28,9 +32,15 @@ layout {
   }
 
   default-column-width { proportion 0.5; }
-  focus-ring { off; }
+
+  focus-ring {
+    on
+    width 3
+    active-color "#4c566a"
+  }
 
   border {
+    off
     width 3
     active-color "#4c566a"
     inactive-color "#23252e"
