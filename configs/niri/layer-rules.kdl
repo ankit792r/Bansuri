@@ -16,6 +16,7 @@ layer-rule {
   match namespace="^rofi$"
   background-effect {
     blur true
+    xray false
   }
 }
 
