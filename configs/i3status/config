@@ -1,0 +1,53 @@
+general {
+    colors = true
+    interval = 2
+
+    color_good = '#286983'
+    color_degraded = '#b4637a'
+    color_bad = '#b4637a'
+}
+
+order += "cpu_usage"
+order += "memory"
+order += "disk /"
+order += "wireless _first_"
+order += "battery all"
+order += "cpu_temperature 0"
+order += "load"
+order += "tztime local"
+
+cpu_temperature 0 {
+    format = "TEMP %degrees°C"
+    max_threshold = 80
+}
+
+cpu_usage {
+    format = "CPU %usage"
+}
+
+memory {
+    format = "MEM %used"
+}
+
+disk "/" {
+    format = "DISK %avail"
+}
+
+wireless _first_ {
+    format_up = "WiFi %essid"
+    format_down = "Disconnected"
+}
+
+battery all {
+    format = "BAT %percentage"
+    low_threshold = 30
+    threshold_type = percentage
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M"
+}
+
+load {
+    format = "LOAD %1min"
+}
