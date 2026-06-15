@@ -1,6 +1,6 @@
 # : App
 [app]
-overall = { bg = "#000000" }
+overall = { bg = "#191724" }
 
 # : Manager (The main file list area)
 [mgr]
