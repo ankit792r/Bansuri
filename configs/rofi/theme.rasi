@@ -4,8 +4,8 @@
     inactive: #1f1d2e;
 
     /* Backgrounds */
-    bg:        rgba(0, 0, 0, 0.8);
-    bg-alt:   rgba(0, 0, 0, 0.8);
+    bg:        #191724;
+    bg-alt:   #191724;
 
     /* Text */
     fg:       #c0caf5;
@@ -17,7 +17,7 @@
 
 /* Main window */
 window {
-    width: 400px;
+    width: 320px;
     border: 2px;
     border-radius: 0px;
     border-color: @active;
@@ -52,8 +52,8 @@ listview {
 
 /* Elements */
 element {
-    padding: 8px;
-    border-radius: 2px;
+    padding: 4px;
+    border-radius: 0px;
 }
 
 element normal.normal {
