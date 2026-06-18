@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-echo "Installing Bansuri"
+echo "Installing Dotfiles"
 
 # Ensure python exists
 if ! command -v python3 >/dev/null 2>&1; then

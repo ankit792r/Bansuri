@@ -19,7 +19,7 @@ font pango:Iosevka Nerd Font 11
 # get the names of outputs by running: swaymsg -t get_outputs
 output eDP-1 mode 1920x1080@60.052Hz pos 2560 0 scale 1
 # output DP-2 mode 2560x1440@100Hz pos 0 0 scale 1
-output * bg ~/Downloads/tree.jpg fill
+output * bg ~/Downloads/wallhaven-arch.png fill
 output * allow_tearing yes
 output * max_render_time off
 
@@ -56,8 +56,9 @@ exec --no-startup-id udiskie
     bindsym $mod+x kill
     bindsym $mod+Shift+z exec slurp | grim -g - - | wl-copy
 
-    bindsym $mod+Backspace exec ~/Bansuri/scripts/power-menu
-    bindsym $mod+Backslash exec ~/Bansuri/scripts/system-menu
+    # this are comming from uwsm env
+    bindsym $mod+Backspace exec power-menu
+    bindsym $mod+Backslash exec system-menu
 
 
     # Start your launcher

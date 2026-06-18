@@ -1,0 +1,6 @@
+[Desktop Entry]
+Name=Sway (UWSM)
+Comment=Sway compositor launched via UWSM
+Exec=uwsm start -F -- sway
+Type=Application
+DesktopNames=sway

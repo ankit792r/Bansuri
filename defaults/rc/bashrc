@@ -7,7 +7,3 @@ PS1='[\W]-> '
 
 bind '"\ej": history-search-forward'
 bind '"\ek": history-search-backward'
-
-export PATH="$HOME/Bansuri/scripts:$PATH"
-export PATH="$HOME/AUR/cursor-cli/dist-package:$PATH"
-. "$HOME/.cargo/env"
