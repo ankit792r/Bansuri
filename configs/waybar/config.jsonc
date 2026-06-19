@@ -31,6 +31,10 @@
     "format-alt": "{:%Y-%m-%d}"
   },
 
+  "sway/mode": {
+    "format": "<span style=\"italic\">{}</span>"
+  },
+
   "cpu": {
     "format": "CPU {usage}%",
     "tooltip": false
