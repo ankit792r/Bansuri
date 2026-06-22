@@ -57,16 +57,13 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal
 
 #
 ### Key bindings
-    bindsym $mod+Return exec $term
-    bindsym $mod+Shift+f exec $browser
-
     bindsym $mod+x kill
     bindsym $mod+Shift+z exec slurp | grim -g - - | wl-copy
+    bindsym $mod+Return exec $term
 
     # this are comming from uwsm env
     bindsym $mod+Backspace exec power-menu
     bindsym $mod+Backslash exec system-menu
-
 
     # Start your launcher
     # bindsym $mod+d exec $menu
