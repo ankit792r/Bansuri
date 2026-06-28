@@ -2,8 +2,8 @@
     /* Accents */
     active:   #34333f;
     inactive: #1f1d2e;
-    bg:       #1e1e2e;
-    bg-alt:   #1e1e2e;
+    bg:       rgba(0, 0, 0, 0.8);
+    bg-alt:   rgba(0, 0, 0, 0.8);
     fg:       #cdd6f4;
     fg-alt:   #6e6a86;
 

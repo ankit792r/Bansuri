@@ -1,4 +1,4 @@
-@define-color bg #1e1e2e;          /* Base */
+@define-color bg rgba(0, 0, 0, 0.6);          /* Base */
 @define-color bg-hover #313244;    /* Surface0 */
 
 @define-color fg #cdd6f4;          /* Text */
@@ -62,11 +62,6 @@ button:hover {
 #window {
   padding: 0 6px;
   color: @fg;
-}
-
-#custom-separator {
-  color: @muted;
-  padding: 0;
 }
 
 #clock,

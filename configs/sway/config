@@ -19,7 +19,7 @@ font pango:Iosevka Nerd Font 12
 # get the names of outputs by running: swaymsg -t get_outputs
 output * mode 1920x1080@144.000Hz pos 2560 0 scale 1
 # output DP-2 mode 2560x1440@100Hz pos 0 0 scale 1
-output * bg ~/Dotfiles/defaults/background.png fill
+output * bg ~/Downloads/wallhaven-1jk6x3_1920x1080.png fill
 output * allow_tearing yes
 output * max_render_time off
 
@@ -57,7 +57,7 @@ exec --no-startup-id /usr/lib/xdg-desktop-portal
 
 #
 ### Key bindings
-    bindsym $mod+x kill
+    bindsym $mod+q kill
     bindsym $mod+Shift+z exec slurp | grim -g - - | wl-copy
     bindsym $mod+Return exec $term
     bindsym $mod+Shift+Return exec kitty --class="termfloat"
@@ -240,7 +240,7 @@ include ./colors.conf
 #----------------------------------------#
 # window colours: border background text #
 #----------------------------------------#
-client.focused                $surface0 $surface0 $text $teal $surface0
+client.focused                $border $border $base $teal $border
 client.unfocused              $base $base $text $teal $base
 client.focused_inactive       $base $base $text $teal $base
 
@@ -253,29 +253,7 @@ bar {
 #------------------------------#
 # Always float certain windows #
 #------------------------------#
-#swaymsg -t get_tree | grep app_id
-    for_window [app_id="pop-up"]                     floating enable
-    for_window [app_id="bubble"]                     floating enable 
-    for_window [app_id="task_dialog"]                floating enable
-    for_window [app_id="Preferences"]                floating enable
-    for_window [app_id="dialog"]                     floating enable 
-    for_window [app_id="menu"]                       floating enable
-    for_window [app_id="Organizer"]                  floating enable
-    for_window [app_id="About"]                      floating enable
-    for_window [app_id="toolbox"]                    floating enable
-    for_window [app_id="page-info"]                  floating enable	
-    for_window [app_id="webconsole"]                 floating enable
-    for_window [app_id="Authy"]                      floating enable
-    for_window [app_id="termfloat"]                  floating enable
-    for_window [app_id="termfloat"]                  resize set height 540
-    for_window [app_id="termfloat"]                  resize set width 960
-    for_window [app_id="mpv"]                        floating enable 
-    for_window [app_id="mpv"]                        resize set height 540
-    for_window [app_id="mpv"]                        resize set width 960
-    for_window [app_id="Nautilus"]                   floating enable 
-    for_window [app_id="Nautilus"]                   resize set height 540
-    for_window [app_id="Nautilus"]                   resize set width 960
-    
+#swaymsg -t get_tree | grep app_id 
     for_window [floating] resize set 50 ppt 50 ppt
     for_window [title="Picture-in-Picture"] floating enable
     for_window [app_id="pavucontrol"] floating enable
@@ -299,29 +277,8 @@ bar {
     }
 
 
-#------------------------------------------#
-# Placing software in a specific workspace #
-#------------------------------------------#
-    #assign [app_id="telegram"]: workspace num  ber 10
-
-
-#----------------#
-# set gtk+ theme #
-#----------------#
-    set $gnome-schema org.gnome.desktop.interface
-    exec_always {
-        gsettings set $gnome-schema gtk-theme 'Catppuccin'
-        gsettings set $gnome-schema icon-theme 'Papirus-Dark'
-        gsettings set $gnome-schema cursor-theme 'Catppuccin-cursor'
-        gsettings set $gnome-schema font-name $font
-    }
-
-
-#-----------------------------#
-#           Misc              #
-#-----------------------------#
 focus_follows_mouse no
-default_border pixel 3
+default_border normal 2
 default_floating_border pixel 3
 gaps inner  5
 gaps outer  0
