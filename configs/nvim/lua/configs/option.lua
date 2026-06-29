@@ -54,11 +54,11 @@ vim.opt.cmdheight = 0
 
 vim.o.winborder = "single"
 
-vim.diagnostic.config({
-  signs = true,
-  unerline = true,
-  upate_in_insert = true,
-  virtual_text = {
-    prefix = "■",
-  },
-})
+-- vim.diagnostic.config({
+--   signs = true,
+--   unerline = true,
+--   upate_in_insert = true,
+--   virtual_text = {
+--     prefix = "■",
+--   },
+-- })
