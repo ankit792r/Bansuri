@@ -49,11 +49,12 @@ hl.config({
 
 		resize_on_border = false,
 		allow_tearing = false,
-		layout = "dwindle",
+		layout = "master",
 	},
 
 	decoration = {
 		rounding = 0,
+		rounding_power = 0,
 
 		active_opacity = 1.0,
 		inactive_opacity = 1.0,
@@ -90,14 +91,12 @@ hl.config({
 	},
 })
 
--- Default curves and animations, see https://wiki.hypr.land/Configuring/Advanced-and-Cool/Animations/
 hl.curve("easeOutQuint", { type = "bezier", points = { { 0.23, 1 }, { 0.32, 1 } } })
 hl.curve("easeInOutCubic", { type = "bezier", points = { { 0.65, 0.05 }, { 0.36, 1 } } })
 hl.curve("linear", { type = "bezier", points = { { 0, 0 }, { 1, 1 } } })
 hl.curve("almostLinear", { type = "bezier", points = { { 0.5, 0.5 }, { 0.75, 1 } } })
 hl.curve("quick", { type = "bezier", points = { { 0.15, 0 }, { 0.1, 1 } } })
 
--- Default springs
 hl.curve("easy", { type = "spring", mass = 1, stiffness = 71.2633, dampening = 15.8273644 })
 
 hl.animation({ leaf = "global", enabled = true, speed = 10, bezier = "default" })
@@ -129,7 +128,7 @@ hl.config({
 	},
 
 	master = {
-		new_status = "master",
+		new_status = "slave",
 	},
 
 	misc = {
@@ -158,8 +157,8 @@ hl.config({
 		kb_model = "",
 		kb_options = "",
 		kb_rules = "",
-    repeat_rate = 40,
-    repeat_delay = 200,
+		repeat_rate = 40,
+		repeat_delay = 200,
 
 		follow_mouse = 0,
 		sensitivity = 0, -- -1.0 - 1.0, 0 means no modification.
@@ -180,15 +179,13 @@ hl.bind(
 )
 hl.bind(mainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(mainMod .. " + Space", hl.dsp.exec_cmd(menu))
-hl.bind(mainMod .. " + P", hl.dsp.window.pseudo())
 hl.bind(mainMod .. " + B", hl.dsp.layout("togglesplit"))
 hl.bind(mainMod .. " + F", hl.dsp.window.fullscreen({ mode = "fullscreen" }))
 hl.bind(mainMod .. " + T", hl.dsp.window.float({ action = "toggle" }))
 
 hl.bind(mainMod .. " + Backspace", hl.dsp.exec_cmd("power-menu"))
 hl.bind(mainMod .. " + Backslash", hl.dsp.exec_cmd("system-menu"))
-hl.bind(mainMod .. " + ALT + Backspace", hl.dsp.exec_cmd("pkill hyprlock || hyprlock"))
-
+hl.bind(mainMod .. " + ALT + L", hl.dsp.exec_cmd("pkill hyprlock || hyprlock"))
 
 -- Move focus with mainMod + arrow keys
 hl.bind(mainMod .. " + left", hl.dsp.focus({ direction = "left" }))
@@ -238,11 +235,8 @@ hl.bind(mainMod .. " + SHIFT + 0", hl.dsp.window.move({ workspace = 8 }))
 -- hl.bind(mainMod .. " + ,+ TAB", "Previous workspace", hl.dsp.focus({ workspace = "e-1" }))
 
 -- Special workspace (scratchpad)
-hl.bind(mainMod .. " + S",  hl.dsp.workspace.toggle_special("scratchpad"))
-hl.bind(
-	mainMod .. " + ALT + S",
-	hl.dsp.window.move({ workspace = "special:scratchpad", follow = false })
-)
+hl.bind(mainMod .. " + S", hl.dsp.workspace.toggle_special("scratchpad"))
+hl.bind(mainMod .. " + ALT + S", hl.dsp.window.move({ workspace = "special:scratchpad", follow = false }))
 
 hl.bind(mainMod .. " + SHIFT + H", hl.dsp.window.swap({ direction = "l" }))
 hl.bind(mainMod .. " + SHIFT + L", hl.dsp.window.swap({ direction = "r" }))
@@ -288,7 +282,6 @@ hl.bind("XF86AudioPlay", hl.dsp.exec_cmd("playerctl play-pause"), { locked = tru
 hl.bind("XF86AudioPrev", hl.dsp.exec_cmd("playerctl previous"), { locked = true })
 
 hl.window_rule({
-	-- Fix some dragging issues with XWayland
 	name = "fix-xwayland-drags",
 	match = {
 		class = "^$",
@@ -300,3 +293,34 @@ hl.window_rule({
 	},
 	no_focus = true,
 })
+
+hl.workspace_rule({
+	workspace = "1",
+	layout = "scrolling",
+	layout_opts = {
+		direction = "right",
+	},
+})
+
+hl.workspace_rule({
+	workspace = "2",
+	layout = "master",
+	layout_opts = {
+		orientation = "left",
+	},
+})
+
+hl.workspace_rule({
+	workspace = "3",
+	layout = "dwindle",
+})
+
+-- hl.window_rule({
+-- 	name = "firefox in 3",
+-- 	match = {
+-- 		class = "^(firefox)$",
+-- 	},
+--   workspace = "1",
+-- 	no_focus = true,
+-- })
+--
